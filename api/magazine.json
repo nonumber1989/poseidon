@@ -1,0 +1,20 @@
+[
+    {
+        "colId": 4,
+        "field": "reason",
+        "title": "Reason Code",
+        "dataType": "string",
+        "sortable": true,
+        "order": 11,
+        "ascOrder": -11
+    },
+    {
+        "colId": 2,
+        "field": "days",
+        "title": "Days",
+        "dataType": "string",
+        "sortable": true,
+        "order": 7,
+        "ascOrder": -7
+    }
+]
