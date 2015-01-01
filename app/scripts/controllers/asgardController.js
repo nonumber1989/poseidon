@@ -7,4 +7,9 @@ asgard.controller('AsgardController', ['$scope','$resource',function ($scope,$re
     $scope.accountResource.get(function(data){
         $scope.currentAccount = data;
     });
+
+    $scope.subjectsResource = $resource('api/subject/subjects.json');
+    $scope.subjectsResource.query(function(data){
+        $scope.subjects = data;
+    });
 }]);

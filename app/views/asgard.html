@@ -3,6 +3,8 @@
 <div ui-view>
     <section>
         <div class="container">
+            <div ng-repeat="subject in subjects">
+
             <div class="row">
                 <div class="col-md-2">
                     <div class="thumbnail">
@@ -13,11 +15,11 @@
                             </button>
                             <div ng-show="isCollapsed">
                             <button type="button" class="btn btn-default">
-                                <i class="glyphicon glyphicon-chevron-up" aria-hidden="true"></i>
+                                <i class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></i>
                                 <div>32</div>
                             </button>
                             <button type="button" class="btn btn-default" aria-label="Left Align">
-                                <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
                             </button>
                                 </div>
                         </div>
@@ -25,30 +27,40 @@
                 </div>
                 <div class="col-md-10">
                         <h6>
-                            热门回答，<strong>From</strong> 医学 关注话题
-                            <button type="button" class="btn btn-default pull-right" aria-label="Left Align">
-                                <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
-                            </button>
+                           <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Hot Topic , <strong>From</strong> 医学 <a>关注话题</a>
+                            <!--<button type="button" class="btn btn-default pull-right" aria-label="Left Align">-->
+                                <!--<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>-->
+                            <!--</button>-->
+                            <a type="button" class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></a>
                         </h6>
 
-                    <h3>为什么很多人认为只要 Google 重回中国市场就能够打败百度？</h3>
+                    <h3>{{subject.title}}</h3>
                     <h6>tei tei、王子剑、高大橙 等人赞同</h6>
 
-                    <p>This is a template for a simple marketing or informational website. It includes a large callout
-                        called a jumbotron and three supporting pieces of content. Use it as a starting point to create
-                        something more unique.
-                        <button type="button" class="btn btn-default" aria-label="Left Align">
-                            <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
-                        </button>
+                    <p><span>{{subject.summary}}</span>
+                        <!--<button type="button" class="btn btn-default" aria-label="Left Align">-->
+                            <!--<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>-->
+                        <!--</button>-->
+                        <a>显示全部</a>
                     </p>
 
 
-                    <div>关注问题 1 条评论 感谢 分享 收藏 • 没有帮助 • 举报 </div>
+                    <h6>
+                        <a><li class="glyphicon glyphicon-plus"></li>关注问题</a>
+                        <a><li class="glyphicon glyphicon-comment"></li>1 条评论</a>
+                        <a><li class="glyphicon glyphicon-heart"></li>感谢</a>
+                        <a><li class="glyphicon glyphicon-share-alt"></li>分享</a>
+                        <a><li class="glyphicon glyphicon-bookmark"></li>收藏</a>
+                        <a>•没有帮助</a>
+                        <a>•举报</a>
+                    </h6>
                 </div>
             </div>
             <hr>
         </div>
+
+        </div>
     </section>
 
 </div>
-<div ng-include="'views/layout/footer.html'"></div>
+<!--<div ng-include="'views/layout/footer.html'"></div>-->
