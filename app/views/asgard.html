@@ -1,4 +1,54 @@
 <div ng-include="'views/layout/header.html'"></div>
 <!--the asgard ui view-->
-<div ui-view></div>
+<div ui-view>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="thumbnail">
+                        <img src="images/yeoman.png">
+                        <div class="caption">
+                            <button class="btn btn-primary" type="button" ng-click="isCollapsed = !isCollapsed" ng-hide="isCollapsed">
+                                <span class="badge">4</span>
+                            </button>
+                            <div ng-show="isCollapsed">
+                            <button type="button" class="btn btn-default">
+                                <i class="glyphicon glyphicon-chevron-up" aria-hidden="true"></i>
+                                <div>32</div>
+                            </button>
+                            <button type="button" class="btn btn-default" aria-label="Left Align">
+                                <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                            </button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                        <h6>
+                            热门回答，<strong>From</strong> 医学 关注话题
+                            <button type="button" class="btn btn-default pull-right" aria-label="Left Align">
+                                <span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
+                            </button>
+                        </h6>
+
+                    <h3>为什么很多人认为只要 Google 重回中国市场就能够打败百度？</h3>
+                    <h6>tei tei、王子剑、高大橙 等人赞同</h6>
+
+                    <p>This is a template for a simple marketing or informational website. It includes a large callout
+                        called a jumbotron and three supporting pieces of content. Use it as a starting point to create
+                        something more unique.
+                        <button type="button" class="btn btn-default" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                        </button>
+                    </p>
+
+
+                    <div>关注问题 1 条评论 感谢 分享 收藏 • 没有帮助 • 举报 </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </section>
+
+</div>
 <div ng-include="'views/layout/footer.html'"></div>

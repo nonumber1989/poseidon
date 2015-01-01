@@ -1,14 +1,12 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name asgardApp.controller:AboutCtrl
- * @description
- * # AboutCtrl
- * Controller of the asgardApp
- */
 var asgard = angular.module('asgard');
 
-asgard.controller('SubjectController', ['$scope',function ($scope) {
+asgard.controller('SubjectController', ['$scope','$resource',function ($scope,$resource) {
 
+    $scope.subjectResource = $resource('api/subject/subjects.json');
+    $scope.subjectResource.query(function(data){
+        $scope.subjects = data;
+    });
+    
 }]);

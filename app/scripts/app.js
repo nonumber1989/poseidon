@@ -46,15 +46,20 @@ asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider){
             templateUrl: "views/asgard.html",
             controller:"AsgardController"
         })
-        .state('asgard.magazine', {
-            url: "/magazine",
-            templateUrl: "../views/asgard/magazine.html",
-            controller:"MagazineController"
+        .state('asgard.setting', {
+            url: "/setting",
+            templateUrl: "views/setting/setting.html",
+            controller:"SettingController"
         })
-        .state('asgard.artwork', {
-            url: "/artwork",
-            templateUrl: "../views/asgard/artwork.html",
-            controller:"ArtworkController"
+        .state('asgard.subject', {
+            url: "/subject",
+            templateUrl: "views/subject/subject.html",
+            controller:"SubjectController"
         })
+//        .state('asgard.artwork', {
+//            url: "/artwork",
+//            templateUrl: "../views/asgard/artwork.html",
+//            controller:"ArtworkController"
+//        })
 
 });
