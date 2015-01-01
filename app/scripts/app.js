@@ -33,12 +33,12 @@ asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider){
         })
         .state('about', {
             url: "/about",
-            templateUrl: "views/about.html",
+            templateUrl: "../views/common/about.html",
             controller:"AboutController"
         })
         .state('contact', {
             url: "/contact",
-            templateUrl: "views/contact.html",
+            templateUrl: "../views/common/contact.html",
             controller:"ContactController"
         })
         .state('asgard', {

@@ -9,6 +9,6 @@
  */
 var asgard = angular.module('asgard');
 
-asgard.controller('ExploreController', ['$scope',function ($scope) {
+asgard.controller('SettingController', ['$scope',function ($scope) {
 
 }]);
