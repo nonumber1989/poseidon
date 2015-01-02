@@ -32,9 +32,32 @@
             <span><strong>常去话题</strong></span>
             <hr>
             <div>
+                <ul as-sortable="sortableOptions" ng-model="favoriteSubjects" class="list-group">
+                    <li ng-repeat="item in favoriteSubjects" as-sortable-item class="as-sortable-item list-group-item">
+                        <div as-sortable-item-handle class="as-sortable-item-handle">
+                            <img src="images/yeoman.png"  width="30px" height="30px">
+                            <span data-ng-bind="item.title"></span>
+                            <span class="pull-right">
+                                <span class="glyphicon glyphicon-remove-sign"></span>
+                                <span class="glyphicon glyphicon-circle-arrow-up"></span>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
                 <a class="pull-right"><li class="glyphicon glyphicon-th-large"></li>话题广场</a>
             </div>
+
         </section>
 
     </div>
 </div>
+
+<style>
+    /* Styles go here */
+    .as-sortable-item,
+    .as-sortable-placeholder {
+        margin: 5px;
+        border-radius: 5px;
+        list-style: none;
+    }
+</style>

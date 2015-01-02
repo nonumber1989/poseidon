@@ -18,6 +18,7 @@ var asgard =
     'ngTouch',
     'ui.router',
     'ui.bootstrap',
+    'ui.sortable',
     'infinite-scroll'
   ])
 asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider){
