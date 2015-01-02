@@ -1,0 +1,37 @@
+<script type="text/ng-template" id="collectionDialog.html">
+    <div class="modal-header">
+        <h3 class="modal-title">添加到收藏夹</h3>
+    </div>
+    <div class="modal-body">
+        <ul>
+            <li ng-repeat="collection in collections">
+                <a ng-click="selected.item = item">{{ collection.title }}</a>
+            </li>
+        </ul>
+        Selected: <b>{{ selected.item }}</b>
+    </div>
+    <div class="modal-footer">
+        <a class="pull-left" ng-click="">创建收藏夹</a>
+        <button class="btn btn-primary" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</script>
+
+<script type="text/ng-template" id="createCollectionDialog.html">
+    <div class="modal-header">
+        <h3 class="modal-title">添加到收藏夹</h3>
+    </div>
+    <div class="modal-body">
+        <ul>
+            <li ng-repeat="collection in collections">
+                <a ng-click="selected.item = collection">{{ collection.title }}</a>
+            </li>
+        </ul>
+        Selected: <b>{{ selected.item }}</b>
+    </div>
+    <div class="modal-footer">
+        <a class="pull-left" ng-click="open2()">创建收藏夹</a>
+        <button class="btn btn-primary" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</script>
