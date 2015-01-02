@@ -1,38 +1,40 @@
 <div ng-include="'views/layout/header.html'"></div>
 <!--the asgard ui view-->
 <div ui-view>
-    <section>
-        <div class="container">
-            <div ng-repeat="subject in subjects">
-
+    <div class="container">
+        <div ng-repeat="subject in subjects">
             <div class="row">
                 <div class="col-md-2">
                     <div class="thumbnail">
                         <img src="images/yeoman.png">
+
                         <div class="caption">
-                            <button class="btn btn-primary" type="button" ng-click="isCollapsed = !isCollapsed" ng-hide="isCollapsed">
+                            <button class="btn btn-primary" type="button" ng-click="isCollapsed = !isCollapsed"
+                                    ng-hide="isCollapsed">
                                 <span class="badge">4</span>
                             </button>
                             <div ng-show="isCollapsed">
-                            <button type="button" class="btn btn-default">
-                                <i class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></i>
-                                <div>32</div>
-                            </button>
-                            <button type="button" class="btn btn-default" aria-label="Left Align">
-                                <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
-                            </button>
-                                </div>
+                                <button type="button" class="btn btn-default">
+                                    <i class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></i>
+
+                                    <div>32</div>
+                                </button>
+                                <button type="button" class="btn btn-default" aria-label="Left Align">
+                                    <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-10">
-                        <h6>
-                           <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Hot Topic , <strong>From</strong> 医学 <a>关注话题</a>
-                            <!--<button type="button" class="btn btn-default pull-right" aria-label="Left Align">-->
-                                <!--<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>-->
-                            <!--</button>-->
-                            <a type="button" class="glyphicon glyphicon-remove pull-right" aria-hidden="true" ></a>
-                        </h6>
+                    <h6>
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Hot Topic ,
+                        <strong>From</strong> 医学 <a>关注话题</a>
+                        <!--<button type="button" class="btn btn-default pull-right" aria-label="Left Align">-->
+                        <!--<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>-->
+                        <!--</button>-->
+                        <a type="button" class="glyphicon glyphicon-remove pull-right" aria-hidden="true" tooltip-placement="right" tooltip="不感兴趣"></a>
+                    </h6>
 
                     <h3>{{subject.title}}</h3>
                     <h6>tei tei、王子剑、高大橙 等人赞同</h6>
@@ -40,28 +42,40 @@
                     <p><span ng-hide="isShowAll">{{subject.summary}}</span>
                         <span ng-show="isShowAll">{{subject.content}}</span>
                         <!--<button type="button" class="btn btn-default" aria-label="Left Align">-->
-                            <!--<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>-->
+                        <!--<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>-->
                         <!--</button>-->
                         <a ng-click="isShowAll = !isShowAll" ng-hide="isShowAll">显示全部</a>
                     </p>
 
 
                     <h6>
-                        <a><li class="glyphicon glyphicon-plus"></li>关注问题</a>
-                        <a ng-click="isShowComment = !isShowComment"><li class="glyphicon glyphicon-comment"></li>
+                        <a>
+                            <li class="glyphicon glyphicon-plus"></li>
+                            关注问题</a>
+                        <a ng-click="isShowComment = !isShowComment">
+                            <li class="glyphicon glyphicon-comment"></li>
                             <span ng-hide="isShowComment">1 条评论</span>
                             <span ng-show="isShowComment">收起评论</span>
                         </a>
-                        <a><li class="glyphicon glyphicon-heart"></li>感谢</a>
-                        <a><li class="glyphicon glyphicon-share-alt"></li>分享</a>
-                        <a ng-click="open()"><li class="glyphicon glyphicon-bookmark"></li>收藏</a>
+                        <a>
+                            <li class="glyphicon glyphicon-heart"></li>
+                            感谢</a>
+                        <a>
+                            <li class="glyphicon glyphicon-share-alt"></li>
+                            分享</a>
+                        <a ng-click="open()">
+                            <li class="glyphicon glyphicon-bookmark"></li>
+                            收藏</a>
                         <a>•没有帮助</a>
                         <a>•举报</a>
-                        <a ng-click="isShowAll = !isShowAll" ng-show="isShowAll" class="pull-right"><li class="glyphicon glyphicon-chevron-up"></li>收起</a>
+                        <a ng-click="isShowAll = !isShowAll" ng-show="isShowAll" class="pull-right">
+                            <li class="glyphicon glyphicon-chevron-up"></li>
+                            收起</a>
                     </h6>
                     <h6 ng-show="isShowComment">
                         <!--<textarea  class="form-control"> </textarea>-->
-                        <input type="text" class="form-control" placeholder="Enter Comment" tooltip-placement="right" tooltip="不感兴趣"  tooltip-trigger="focus">
+                        <input type="text" class="form-control" placeholder="Enter Comment" >
+
                         <div class="btn-group-toolbar pull-right" role="group" aria-label="...">
                             <button type="button" class="btn btn-default" ng-click="isShowComment = false">取消</button>
                             <button type="button" class="btn btn-primary">评论</button>
@@ -72,8 +86,7 @@
             <hr>
         </div>
 
-        </div>
-    </section>
+    </div>
 
     <!-- collection dialog templates -->
     <div ng-include="'views/asgard/template/collectionDialog.html'"></div>
