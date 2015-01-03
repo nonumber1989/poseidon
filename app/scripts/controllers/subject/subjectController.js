@@ -17,4 +17,23 @@ asgard.controller('SubjectController', ['$scope','$resource',function ($scope,$r
     $scope.sortableOptions = {
         containment: '#sortable-container'
     };
+
+    $scope.pinSubject = function(subject){
+        $scope.favoriteSubjects.push(subject);
+    };
+    $scope.cancelFollowSubject = function(subject){
+        var index = $scope.favoriteSubjects.indexOf(subject);
+        if (index > -1) {
+            $scope.favoriteSubjects.splice(index, 1);
+        }
+    };
+    $scope.topFollowSubject = function(subject){
+
+        var index = $scope.favoriteSubjects.indexOf(subject);
+        if (index > -1) {
+            $scope.favoriteSubjects.splice(index, 1);
+        }
+        $scope.favoriteSubjects.splice(0, 0, subject);
+
+    };
 }]);

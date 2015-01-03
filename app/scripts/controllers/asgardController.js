@@ -17,6 +17,8 @@ asgard.controller('AsgardController', ['$scope','$resource','$modal', '$log',fun
         $scope.collections = data;
     });
 
+    $scope.messagePopover = '<a>Hello, World!</a>';
+    $scope.messagePopoverTitle = 'Title';
 
     $scope.open = function (size) {
         var modalInstance = $modal.open({
