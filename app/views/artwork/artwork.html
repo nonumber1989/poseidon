@@ -1,0 +1,56 @@
+<div class="container">
+    <!--
+        <div class="jumbotron">
+            <div class="container">
+                <carousel interval="interval">
+                    <slide ng-repeat="slide in slides" active="slide.active">
+                        <img ng-src="{{slide.image}}" style="margin:auto;">
+
+                        <div class="carousel-caption">
+                            <h4>Slide {{$index}}</h4>
+
+                            <p>{{slide.text}}</p>
+                        </div>
+                    </slide>
+                </carousel>
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-info" ng-click="addSlide()">Add Slide</button>
+                    </div>
+                    <div class="col-md-6">
+                        Interval, in milliseconds: <input type="number" class="form-control" ng-model="interval">
+                        <br/>Enter a negative number or 0 to stop the interval.
+                    </div>
+                </div>
+            </div>
+        </div>
+         -->
+    <section class="panel panel-default">
+        <div class="panel-heading">
+            <span class="panel-title"><strong>可能喜欢</strong></span>
+            <span class="pull-right">
+                <span><li class="glyphicon glyphicon-fast-backward"></li></span>
+                <span><li class="glyphicon glyphicon-fast-forward"></li></span>
+            </span>
+        </div>
+        <div class="panel-body">
+            <div ng-repeat="artwork in artworks">
+                <div class="col-md-3">
+                    <div class="thumbnail" ng-mouseenter="showDetail = true" ng-mouseleave="showDetail = false">
+                        <div class="caption" ng-show="showDetail">
+                            <div style="height: 170px">
+                                <div>{{artwork.title}}</div>
+                                <div>{{artwork.alt_title}}</div>
+                            </div>
+                        </div>
+                        <div class="caption" ng-hide="showDetail">
+                            <div style="height: 170px">
+                                <img src="images/yeoman.png" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -49,7 +49,22 @@
                     </div>
                 </div>
             </nav>
-            <!-- good at -->
+            <!-- good at
+            <section class="panel panel-default">
+                <div class="panel-heading">
+                    <strong class="panel-title">擅长话题</strong>
+                    <a class="pull-right"><li class="glyphicon glyphicon-pencil"></li>编辑擅长话题</a>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="expert in experts">
+                            <span class="badge">14</span>
+                            <span>{{expert.title}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            -->
             <section class="jumbotron">
                 <div>
                     <span><strong>擅长话题</strong></span>
@@ -58,8 +73,9 @@
                 <hr>
                 <ul class="list-group">
                     <li class="list-group-item" ng-repeat="expert in experts">
-                        <span class="badge">14</span>
-                        <span>{{expert.title}}</span>
+                            <img src="images/internet.jpg" class="img-circle" width="50" height="50">
+                                <span class="badge">14</span>
+                                <span>{{expert.title}}</span>
                     </li>
                 </ul>
             </section>
@@ -84,6 +100,17 @@
                     <span>关注了</span>
                     <span>关注者</span>
                 </div>
+                <hr>
+                <div>
+                    <strong>关注了<a>30个话题</a></strong>
+                </div>
+                <hr>
+                <div>
+                    <h10>个人主页被109人浏览</h10>
+                </div>
+            </section>
+            <section class="jumbotron">
+                知乎指南 建议反馈 移动应用 加入知乎 知乎协议 商务合作 © 2015 知乎
             </section>
         </div>
     </div>

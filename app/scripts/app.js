@@ -42,6 +42,11 @@ asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider){
             templateUrl: "../views/common/contact.html",
             controller:"ContactController"
         })
+        .state('artwork', {
+            url: "/artwork",
+            templateUrl: "../views/artwork/artwork.html",
+            controller:"ArtworkController"
+        })
         .state('asgard', {
             url: "/asgard",
             templateUrl: "views/asgard.html",
