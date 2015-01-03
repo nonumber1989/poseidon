@@ -1,4 +1,35 @@
 <div class="container">
+    <div ui-view>
+        <hr>
+        <section class="panel panel-default">
+            <div class="panel-heading">
+                <span class="panel-title"><strong>可能喜欢</strong></span>
+            <span class="pull-right">
+                <span><li class="glyphicon glyphicon-fast-backward"></li></span>
+                <span><li class="glyphicon glyphicon-fast-forward"></li></span>
+            </span>
+            </div>
+            <div class="panel-body">
+                <div ng-repeat="artwork in artworks">
+                    <div class="col-md-3">
+                        <a ui-sref=".detail" class="thumbnail" ng-mouseenter="showDetail = true" ng-mouseleave="showDetail = false">
+                            <div class="caption" ng-show="showDetail">
+                                <div style="height: 170px">
+                                    <div>{{artwork.title}}</div>
+                                    <div>{{artwork.alt_title}}</div>
+                                </div>
+                            </div>
+                            <div class="caption" ng-hide="showDetail">
+                                <div style="height: 170px">
+                                    <img src="images/yeoman.png" alt="...">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
     <!--
         <div class="jumbotron">
             <div class="container">
@@ -25,32 +56,4 @@
             </div>
         </div>
          -->
-    <section class="panel panel-default">
-        <div class="panel-heading">
-            <span class="panel-title"><strong>可能喜欢</strong></span>
-            <span class="pull-right">
-                <span><li class="glyphicon glyphicon-fast-backward"></li></span>
-                <span><li class="glyphicon glyphicon-fast-forward"></li></span>
-            </span>
-        </div>
-        <div class="panel-body">
-            <div ng-repeat="artwork in artworks">
-                <div class="col-md-3">
-                    <div class="thumbnail" ng-mouseenter="showDetail = true" ng-mouseleave="showDetail = false">
-                        <div class="caption" ng-show="showDetail">
-                            <div style="height: 170px">
-                                <div>{{artwork.title}}</div>
-                                <div>{{artwork.alt_title}}</div>
-                            </div>
-                        </div>
-                        <div class="caption" ng-hide="showDetail">
-                            <div style="height: 170px">
-                                <img src="images/yeoman.png" alt="...">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 </div>
