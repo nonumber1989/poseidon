@@ -1,9 +1,41 @@
-<div class="list-group">
-    <a href="#" class="list-group-item active">
-        Cras justo odio
-    </a>
-    <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-    <a href="#" class="list-group-item">Morbi leo risus</a>
-    <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-    <a href="#" class="list-group-item">Vestibulum at eros</a>
+<hr>
+<div class="container">
+    <section class="jumbotron">
+        <div class="container">
+            <div>
+                <strong>{{currentAccount.name}}</strong>
+                <span>,致敬知乎</span>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images/yeoman.png">
+                </div>
+                <div class="col-md-8">
+                    <div>
+                        <span><li class="glyphicon glyphicon-map-marker"></li>上海</span>
+                    </div>
+                    <div>
+                        <span><li class="glyphicon glyphicon-map-marker"></li>上海</span>
+                    </div>
+                    <div>
+                        <span><li class="glyphicon glyphicon-map-marker"></li>上海</span>
+                    </div>
+                    <hr>
+                    <div>{{currentAccount.description}}</div>
+                </div>
+            </div>
+            <div class="row">
+                <span>获得</span>
+                <span><li class="glyphicon glyphicon-thumbs-up"></li>2赞同</span>
+                <span><li class="glyphicon glyphicon-heart"></li>32感谢</span>
+            </div>
+        </div>
+    </section>
+    <section>
+        <tabset>
+            <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+                <div ng-include="tab.content"></div>
+            </tab>
+        </tabset>
+    </section>
 </div>
