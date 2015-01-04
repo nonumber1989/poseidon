@@ -9,7 +9,6 @@
  */
 var asgard = angular.module('asgard');
 
-asgard.controller('ArtworkController', ['$scope','$resource',function ($scope,$resource) {
-
+asgard.controller('CommodityController', ['$scope',function ($scope) {
 
 }]);

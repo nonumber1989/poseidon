@@ -1,4 +1,144 @@
-<div ng-include="'views/layout/header.html'"></div>
+<div ng-include="'views/layout/header.html'" xmlns="http://www.w3.org/1999/html"></div>
 <!--the asgard ui view-->
-<div ui-view></div>
-<div ng-include="'views/layout/footer.html'"></div>
+<div ui-view>
+    <div class="container">
+        <section class="col-md-9">
+            <span><li class="glyphicon glyphicon-list"></li><strong>最新动态</strong></span>
+            <a class="pull-right"><li class="glyphicon glyphicon-cog"></li>设置</a>
+            <hr>
+        <div ng-repeat="subject in subjects">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="thumbnail">
+                        <img src="images/internet.jpg">
+
+                        <div class="caption">
+                            <button class="btn btn-primary" type="button" ng-click="isCollapsed = !isCollapsed"
+                                    ng-hide="isCollapsed">
+                                <span class="badge">4</span>
+                            </button>
+                            <div ng-show="isCollapsed">
+                                <button type="button" class="btn btn-default">
+                                    <i class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></i>
+
+                                    <div>32</div>
+                                </button>
+                                <button type="button" class="btn btn-default" aria-label="Left Align">
+                                    <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10" ng-mouseenter="toolShow = true" ng-mouseleave="toolShow = false">
+                    <h6>
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Hot Topic ,
+                        <strong>From</strong> 医学 <a>关注话题</a>
+                        <!--<button type="button" class="btn btn-default pull-right" aria-label="Left Align">-->
+                        <!--<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>-->
+                        <!--</button>-->
+                        <a type="button" ng-show="toolShow" class="glyphicon glyphicon-remove pull-right" aria-hidden="true" tooltip-placement="right" tooltip="不感兴趣"></a>
+                    </h6>
+
+                    <h4><strong>{{subject.title}}</strong></h4>
+                    <h8>tei tei、王子剑、高大橙 等人赞同</h8>
+
+                    <p><span ng-hide="isShowAll">{{subject.summary}}</span>
+                        <span ng-show="isShowAll">{{subject.content}}</span>
+                        <!--<button type="button" class="btn btn-default" aria-label="Left Align">-->
+                        <!--<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>-->
+                        <!--</button>-->
+                        <a ng-click="isShowAll = !isShowAll" ng-hide="isShowAll">显示全部</a>
+                    </p>
+
+
+                    <h6>
+                        <a>
+                            <li class="glyphicon glyphicon-plus"></li>
+                            关注问题</a>
+                        <a ng-click="isShowComment = !isShowComment">
+                            <li class="glyphicon glyphicon-comment"></li>
+                            <span ng-hide="isShowComment">1 条评论</span>
+                            <span ng-show="isShowComment">收起评论</span>
+                        </a>
+                        <span ng-show="toolShow">
+                        <a>
+                            <li class="glyphicon glyphicon-heart"></li>
+                            感谢</a>
+                        <a>
+                            <li class="glyphicon glyphicon-share-alt"></li>
+                            分享</a>
+                        <a ng-click="open('sm')">
+                            <li class="glyphicon glyphicon-bookmark"></li>
+                            收藏</a>
+                        <a>•没有帮助</a>
+                        <a>•举报</a>
+                        </span>
+                        <a ng-click="isShowAll = !isShowAll" ng-show="isShowAll" class="pull-right">
+                            <li class="glyphicon glyphicon-chevron-up"></li>
+                            收起</a>
+                    </h6>
+                    <h6 ng-show="isShowComment">
+                        <!--<textarea  class="form-control"> </textarea>-->
+                        <input type="text" class="form-control" placeholder="Enter Comment" >
+
+                        <div class="btn-group-toolbar pull-right" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default" ng-click="isShowComment = false">取消</button>
+                            <button type="button" class="btn btn-primary">评论</button>
+                        </div>
+                    </h6>
+                </div>
+            </div>
+            <hr>
+        </div>
+</section>
+        <section class="col-md-3">
+            <ul class="list-group">
+                <li class="list-group-item glyphicon glyphicon-file"><a>我的草稿</a></li>
+                <li class="list-group-item glyphicon glyphicon-heart"><a>我的收藏</a> <span class="badge">14</span></li>
+                <li class="list-group-item glyphicon glyphicon-bell"><a>我关注的问题</a></li>
+                <li class="list-group-item glyphicon glyphicon-pencil"><a>邀请我回答的问题</a></li>
+            </ul>
+            <ul class="list-group">
+                <li class="list-group-item"><a>所有问题</a></li>
+                <li class="list-group-item"><a>话题广场</a></li>
+                <li class="list-group-item"><a>首场秀</a></li>
+                <li class="list-group-item"><a>公共编辑动态</a></li>
+            </ul>
+            <section>
+                <div>
+                    <span><strong>知乎圆桌</strong></span>
+                    <a class="pull-right">查看全部<li class="glyphicon glyphicon-chevron-right"></li></a>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item"><a>所有问题</a></li>
+                    <li class="list-group-item"><a>话题广场</a></li>
+                    <li class="list-group-item"><a>首场秀</a></li>
+                    <li class="list-group-item"><a>公共编辑动态</a></li>
+                </ul>
+            </section>
+            <hr>
+            <section>
+                <div>
+                    <span><strong>常去话题</strong></span>
+                    <a class="pull-right">查看全部<li class="glyphicon glyphicon-chevron-right"></li></a>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item"><a>所有问题</a></li>
+                    <li class="list-group-item"><a>话题广场</a></li>
+                    <li class="list-group-item"><a>首场秀</a></li>
+                    <li class="list-group-item"><a>公共编辑动态</a></li>
+                </ul>
+            </section>
+        </section>
+    </div>
+
+    <!-- collection dialog templates -->
+    <div ng-include="'views/asgard/template/collectionDialog.html'"></div>
+    <div class="row">
+        <div class="col-xs-3">
+
+        </div>
+    </div>
+</div>
+<!--<div ng-include="'views/layout/footer.html'"></div>-->

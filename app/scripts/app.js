@@ -18,6 +18,7 @@ var asgard =
     'ngTouch',
     'ui.router',
     'ui.bootstrap',
+    'ui.sortable',
     'infinite-scroll'
   ])
 asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider){
@@ -33,28 +34,48 @@ asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider){
         })
         .state('about', {
             url: "/about",
-            templateUrl: "views/about.html",
+            templateUrl: "../views/common/about.html",
             controller:"AboutController"
         })
         .state('contact', {
             url: "/contact",
-            templateUrl: "views/contact.html",
+            templateUrl: "../views/common/contact.html",
             controller:"ContactController"
+        })
+        .state('artwork', {
+            url: "/artwork",
+            templateUrl: "../views/artwork/artwork.html",
+            controller:"ArtworkController"
+        })
+        .state('artwork.detail', {
+            url: "/artworkDetail",
+            templateUrl: "../views/artwork/artworkDetail.html",
+            controller:"ArtworkDetailController"
         })
         .state('asgard', {
             url: "/asgard",
             templateUrl: "views/asgard.html",
             controller:"AsgardController"
         })
-        .state('asgard.magazine', {
-            url: "/magazine",
-            templateUrl: "../views/asgard/magazine.html",
-            controller:"MagazineController"
+        .state('asgard.setting', {
+            url: "/setting",
+            templateUrl: "views/setting/setting.html",
+            controller:"SettingController"
         })
-        .state('asgard.artwork', {
-            url: "/artwork",
-            templateUrl: "../views/asgard/artwork.html",
-            controller:"ArtworkController"
+        .state('asgard.subject', {
+            url: "/subject",
+            templateUrl: "views/subject/subject.html",
+            controller:"SubjectController"
         })
+        .state('asgard.account', {
+            url: "/account",
+            templateUrl: "views/account/account.html",
+            controller:"AccountController"
+        })
+//        .state('asgard.artwork', {
+//            url: "/artwork",
+//            templateUrl: "../views/asgard/artwork.html",
+//            controller:"ArtworkController"
+//        })
 
 });

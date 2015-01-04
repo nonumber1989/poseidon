@@ -1,0 +1,69 @@
+<div>
+    <div class="container">
+        <section class="col-md-8">
+            <span><li class="glyphicon glyphicon-list"></li><strong>话题动态</strong></span>
+            <a class="pull-right">共关注30个话题</a>
+            <hr>
+            <div ng-repeat="subject in subjects" >
+                <div class="row" ng-mouseenter="toolShow = true" ng-mouseleave="toolShow = false">
+                    <div class="col-md-2">
+                        <h3>
+                            <div class="thumbnail">
+                                <img src="images/internet.jpg">
+                            </div>
+                        </h3>
+                    </div>
+                    <div class="col-md-10">
+                        <div><strong>{{subject.title}}</strong>
+                            <span ng-show="toolShow">
+                            <a ng-click="pinSubject(subject)"><li class="glyphicon glyphicon-pushpin"></li>固定话题</a>
+                            <a ng-click="cancelFollowSubject(subject)" class="pull-right">取消关注</a>
+                            </span>
+                        </div>
+                         <hr>
+                        <div ng-repeat="topic in subject.subjects">
+                            <h6><a>{{topic.title}}</a><span> {{topic.createTime}} 秒前创建</span></h6>
+                        </div>
+                    </div>
+
+                </div>
+                <hr>
+            </div>
+        </section>
+        <section class="col-md-4">
+            <span><strong>常去话题</strong></span>
+            <hr>
+            <div>
+                <ul as-sortable="sortableOptions" ng-model="favoriteSubjects" class="list-group">
+                    <li ng-repeat="item in favoriteSubjects" as-sortable-item class="as-sortable-item list-group-item">
+                        <div>
+                            <img src="images/yeoman.png"  width="30px" height="30px">
+                            <span data-ng-bind="item.title"></span>
+                            <span class="pull-right">
+                                <a ng-click="cancelFollowSubject(item)" tooltip-placement="top" tooltip="取消订阅"><i class="glyphicon glyphicon-remove-sign"></i></a>
+                                <a ng-click="topFollowSubject(item)" tooltip-placement="top" tooltip="置顶"><i class="glyphicon glyphicon-circle-arrow-up"></i></a>
+                            </span>
+                        </div>
+                        <div as-sortable-item-handle class="as-sortable-item-handle">
+                           <span>{{item.topics}}话题</span>
+                            <span class="pull-right">{{item.follower}}追随</span>
+                        </div>
+                    </li>
+                </ul>
+                <a class="pull-right"><li class="glyphicon glyphicon-th-large"></li>话题广场</a>
+            </div>
+
+        </section>
+
+    </div>
+</div>
+
+<style>
+    /* Styles go here */
+    .as-sortable-item,
+    .as-sortable-placeholder {
+        margin: 5px;
+        border-radius: 5px;
+        list-style: none;
+    }
+</style>

@@ -1,0 +1,117 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <section class="jumbotron">
+                <div>
+                    <strong>{{currentAccount.name}}</strong>
+                    <span>,致敬知乎</span>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="images/yeoman.png">
+                    </div>
+                    <div class="col-md-8">
+                        <div>
+                            <span><li class="glyphicon glyphicon-map-marker"></li>上海</span>
+                        </div>
+                        <div>
+                            <span><li class="glyphicon glyphicon-map-marker"></li>上海</span>
+                        </div>
+                        <div>
+                            <span><li class="glyphicon glyphicon-map-marker"></li>上海</span>
+                        </div>
+                        <hr>
+                        <div>{{currentAccount.description}}</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <span>获得</span>
+                    <span><li class="glyphicon glyphicon-thumbs-up"></li>2赞同</span>
+                    <span><li class="glyphicon glyphicon-heart"></li>32感谢</span>
+                </div>
+            </section>
+            <!-- navigation -->
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">
+                            <li class="glyphicon glyphicon-home"></li>
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">提问1</a></li>
+                            <li><a href="#">回答3</a></li>
+                            <li><a href="#">专栏文章10</a></li>
+                            <li><a href="#">收藏9</a></li>
+                            <li><a href="#">公共编辑1</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- good at
+            <section class="panel panel-default">
+                <div class="panel-heading">
+                    <strong class="panel-title">擅长话题</strong>
+                    <a class="pull-right"><li class="glyphicon glyphicon-pencil"></li>编辑擅长话题</a>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="expert in experts">
+                            <span class="badge">14</span>
+                            <span>{{expert.title}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            -->
+            <section class="jumbotron">
+                <div>
+                    <span><strong>擅长话题</strong></span>
+                    <a class="pull-right"><li class="glyphicon glyphicon-pencil"></li>编辑擅长话题</a>
+                </div>
+                <hr>
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="expert in experts">
+                            <img src="images/internet.jpg" class="img-circle" width="50" height="50">
+                                <span class="badge">14</span>
+                                <span>{{expert.title}}</span>
+                    </li>
+                </ul>
+            </section>
+            <!-- answer -->
+            <section class="jumbotron">
+                <div>
+                    <span><strong>回答</strong></span>
+                    <a class="pull-right"><li class="glyphicon glyphicon-pencil"></li>编辑擅长话题</a>
+                </div>
+                <hr>
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="expert in experts">
+                        <span class="badge">14</span>
+                        <span>{{expert.title}}</span>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="col-md-4">
+            <section class="jumbotron">
+                <div>
+                    <span>关注了</span>
+                    <span>关注者</span>
+                </div>
+                <hr>
+                <div>
+                    <strong>关注了<a>30个话题</a></strong>
+                </div>
+                <hr>
+                <div>
+                    <h10>个人主页被109人浏览</h10>
+                </div>
+            </section>
+            <section class="jumbotron">
+                知乎指南 建议反馈 移动应用 加入知乎 知乎协议 商务合作 © 2015 知乎
+            </section>
+        </div>
+    </div>
+</div>
