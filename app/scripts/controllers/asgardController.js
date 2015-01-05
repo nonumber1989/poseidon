@@ -1,7 +1,12 @@
 'use strict';
 
 var asgard = angular.module('asgard');
-asgard.controller('AsgardController', ['$scope','$resource','$modal', '$log',function ($scope,$resource,$modal, $log) {
+asgard.controller('AsgardController', ['$scope','$resource','$modal', '$log','$translate',function ($scope,$resource,$modal, $log,$translate) {
+
+  $scope.changeLanguage = function (key) {
+    $translate.use(key);
+  };
+
     $scope.accountResource = $resource('api/people/account.json');
     $scope.accountResource.get(function(data){
         $scope.currentAccount = data;

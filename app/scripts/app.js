@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 var asgard =
-   angular.module('asgard', [
+  angular.module('asgard', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -19,9 +19,24 @@ var asgard =
     'ui.router',
     'ui.bootstrap',
     'ui.sortable',
-    'infinite-scroll'
+    'infinite-scroll',
+    'pascalprecht.translate'
   ])
-asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider){
+asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider,$translateProvider){
+  $translateProvider.translations('en', {
+    TITLE: 'Hello',
+    FOO: 'This is a paragraph.',
+    BUTTON_LANG_EN: 'english',
+    BUTTON_LANG_DE: 'german'
+  });
+  $translateProvider.translations('de', {
+    TITLE: 'Hallo',
+    FOO: 'Dies ist ein Paragraph.',
+    BUTTON_LANG_EN: 'englisch',
+    BUTTON_LANG_DE: 'deutsch'
+  });
+  $translateProvider.preferredLanguage('de');
+
     // For any unmatched url, send to /route1
     $urlRouterProvider.otherwise("/home")
 
