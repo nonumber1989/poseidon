@@ -1,18 +1,22 @@
 [
     {
+        "field":"account",
         "title": "Account",
-        "content": "Dynamic content 1"
+        "content": "views/setting/account.html"
     },
     {
+        "field":"password",
         "title": "Password",
-        "content": "Dynamic content 2"
+        "content": "views/setting/password.html"
     },
     {
+        "field":"notification",
         "title": "Notification",
-        "content": "Dynamic content 2"
+        "content": "views/setting/notification.html"
     },
     {
+        "field":"filter",
         "title": "Filter",
-        "content": "Dynamic content 2"
+        "content": "views/setting/filter.html"
     }
 ]

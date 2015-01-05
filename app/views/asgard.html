@@ -1,13 +1,13 @@
 <div ng-include="'views/layout/header.html'" xmlns="http://www.w3.org/1999/html"></div>
-<pre>
-  <div>{{ 'TITLE' | translate }}</div>
-</pre>
+<!--<pre>-->
+  <!--<div>{{ 'TITLE' | translate }}</div>-->
+<!--</pre>-->
 <!--the asgard ui view-->
 <div ui-view>
     <div class="container">
         <section class="col-md-9">
             <span><li class="glyphicon glyphicon-list"></li><strong>最新动态</strong></span>
-            <a class="pull-right"><li class="glyphicon glyphicon-cog"></li>设置</a>
+            <a class="pull-right" ng-href="#/asgard/setting/filter"><li class="glyphicon glyphicon-cog"></li>设置</a>
             <hr>
         <div ng-repeat="subject in subjects">
             <div class="row">
