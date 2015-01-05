@@ -1,0 +1,10 @@
+[
+    {
+        "title": "Detail",
+        "content": "views/artwork/artworkDetail/detail.html"
+    },
+    {
+        "title": "Comment",
+        "content": "views/artwork/artworkDetail/comment.html"
+    }
+]
