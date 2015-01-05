@@ -58,7 +58,7 @@ asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider){
             controller:"AsgardController"
         })
         .state('asgard.setting', {
-            url: "/setting",
+            url: "/setting/:status",
             templateUrl: "views/setting/setting.html",
             controller:"SettingController"
         })

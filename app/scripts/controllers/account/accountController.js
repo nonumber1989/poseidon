@@ -1,7 +1,7 @@
 'use strict';
 
 var asgard = angular.module('asgard');
-asgard.controller('AccountController', ['$scope','$resource', function ($scope,$resource) {
+asgard.controller('AccountController', ['$scope','$resource', function ($scope,$resource,$stateParams) {
     $scope.accountResource = $resource('api/people/account.json');
     $scope.accountResource.get(function(data){
         $scope.currentAccount = data;
