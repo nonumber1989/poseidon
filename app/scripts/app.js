@@ -20,6 +20,7 @@ var asgard =
     'ui.bootstrap',
     'ui.sortable',
     'infinite-scroll',
+    'angularFileUpload',
     'pascalprecht.translate'
   ])
 asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider,$translateProvider){
