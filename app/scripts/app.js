@@ -16,6 +16,7 @@ var asgard =
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'ngImgCrop',
     'ui.router',
     'ui.bootstrap',
     'ui.sortable',
