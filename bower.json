@@ -18,6 +18,7 @@
     "angular-file-upload":"~1.1.5",
     "ngInfiniteScroll":"~1.2.0",
     "ng-sortable": "~1.1.9",
+    "ng-img-crop":"~0.3.2",
     "font-awesome": "~4.2.0"
   },
   "devDependencies": {
