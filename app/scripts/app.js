@@ -24,76 +24,20 @@ var asgard =
     'angularFileUpload',
     'pascalprecht.translate'
   ])
-asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider,$translateProvider,restServiceProvider){
-    restServiceProvider.setBaseUrl('http://wwww.myotherrestservice.com');
-  $translateProvider.translations('en', {
-    TITLE: 'Hello',
-    FOO: 'This is a paragraph.',
-    BUTTON_LANG_EN: 'english',
-    BUTTON_LANG_DE: 'german'
-  });
-  $translateProvider.translations('de', {
-    TITLE: 'Hallo',
-    FOO: 'Dies ist ein Paragraph.',
-    BUTTON_LANG_EN: 'englisch',
-    BUTTON_LANG_DE: 'deutsch'
-  });
+asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider,$translateProvider,navigationProvider,i18nProvider){
+  navigationProvider.setNavigationUrl('api/navigation.json');
+  var i18nUrls = ['api/i18n/en.json','api/i18n/de.json'];
+  i18nProvider.setI18nUrlArray(i18nUrls);
   $translateProvider.preferredLanguage('de');
-
-    // For any unmatched url, send to /route1
-    $urlRouterProvider.otherwise("/home")
-
+  $urlRouterProvider.otherwise("/home");
     $stateProvider
-        //home state and home page
-        .state('home', {
-            url: "/home",
-            templateUrl: "views/layout/cover.html",
-            controller:"LayoutController"
-        })
-        .state('about', {
-            url: "/about",
-            templateUrl: "../views/common/about.html",
-            controller:"AboutController"
-        })
-        .state('contact', {
-            url: "/contact",
-            templateUrl: "../views/common/contact.html",
-            controller:"ContactController"
-        })
-        .state('artwork', {
-            url: "/artwork",
-            templateUrl: "../views/artwork/artwork.html",
-            controller:"ArtworkController"
-        })
-        .state('artwork.detail', {
-            url: "/artworkDetail",
-            templateUrl: "../views/artwork/artworkDetail.html",
-            controller:"ArtworkDetailController"
-        })
-        .state('asgard', {
-            url: "/asgard",
-            templateUrl: "views/asgard.html",
-            controller:"AsgardController"
-        })
-        .state('asgard.setting', {
-            url: "/setting/:status",
-            templateUrl: "views/setting/setting.html",
-            controller:"SettingController"
-        })
-        .state('asgard.subject', {
-            url: "/subject",
-            templateUrl: "views/subject/subject.html",
-            controller:"SubjectController"
-        })
-        .state('asgard.account', {
-            url: "/account",
-            templateUrl: "views/account/account.html",
-            controller:"AccountController"
-        })
-//        .state('asgard.artwork', {
-//            url: "/artwork",
-//            templateUrl: "../views/asgard/artwork.html",
-//            controller:"ArtworkController"
-//        })
-
+      .state('home', {
+        url: "/home",
+        templateUrl: "views/layout/cover.html",
+        controller:"LayoutController"
+      });
+});
+asgard.run(function(navigation,i18n){
+  navigation.setUpNavigation();
+  i18n.setUpI18nByArray();
 });
