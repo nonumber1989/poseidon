@@ -7,9 +7,9 @@ asgard.provider('navigation', function ($stateProvider) {
       setUpNavigation: function(){
         var navigationResource = $resource(navigationUrl);
         navigationResource.get(function(result){
-          for (var routeName in result) {
+          for (var routeName in result.navigation) {
             if (!$state.get(routeName)) {
-              $stateProvider.state(routeName, result[routeName]);
+              $stateProvider.state(routeName, result.navigation[routeName]);
             }
           }
         },function(error){
