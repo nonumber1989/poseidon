@@ -10,13 +10,13 @@ asgard.provider('i18n', function ($translateProvider) {
         i18nResource.get(function(result){
           $translateProvider.translations(result.language,result.i18n);
         },function(error){
-		  
+
         });
       },
 	  setUpI18nByArray: function(){
 	  var i18nResource;
-	  for(var url in i18nUrlArray){
-	    i18nResource = $resource(url);
+	  for(var i =0;i<i18nUrlArray.length;i++){
+	    i18nResource = $resource(i18nUrlArray[i]);
         i18nResource.get(function(result){
           $translateProvider.translations(result.language,result.i18n);
         },function(error){

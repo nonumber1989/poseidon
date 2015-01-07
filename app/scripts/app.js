@@ -26,19 +26,8 @@ var asgard =
   ])
 asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider,$translateProvider,navigationProvider,i18nProvider){
   navigationProvider.setNavigationUrl('api/navigation.json');
-  //i18nProvider.setI18nUrl('api/i18n/en.json');
-  $translateProvider.translations('en', {
-    TITLE: 'Hello',
-    FOO: 'This is a paragraph.',
-    BUTTON_LANG_EN: 'english',
-    BUTTON_LANG_DE: 'german'
-  });
-  $translateProvider.translations('de', {
-    TITLE: 'Hallo',
-    FOO: 'Dies ist ein Paragraph.',
-    BUTTON_LANG_EN: 'englisch',
-    BUTTON_LANG_DE: 'deutsch'
-  });
+  var i18nUrls = ['api/i18n/en.json','api/i18n/de.json'];
+  i18nProvider.setI18nUrlArray(i18nUrls);
   $translateProvider.preferredLanguage('de');
   $urlRouterProvider.otherwise("/home");
     $stateProvider
@@ -47,9 +36,8 @@ asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider,$tra
         templateUrl: "views/layout/cover.html",
         controller:"LayoutController"
       });
-
-
 });
 asgard.run(function(navigation,i18n){
   navigation.setUpNavigation();
+  i18n.setUpI18nByArray();
 });
