@@ -24,7 +24,8 @@ var asgard =
     'angularFileUpload',
     'pascalprecht.translate'
   ])
-asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider,$translateProvider){
+asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider,$translateProvider,restServiceProvider){
+    restServiceProvider.setBaseUrl('http://wwww.myotherrestservice.com');
   $translateProvider.translations('en', {
     TITLE: 'Hello',
     FOO: 'This is a paragraph.',
