@@ -18,7 +18,7 @@ asgard.provider('navigation', function ($stateProvider) {
       }
     }
   };
-    this.setNavigationUrl = function (url) {
-      navigationUrl = url;
-    }
-  });
+  this.setNavigationUrl = function (url) {
+    navigationUrl = url;
+  }
+});

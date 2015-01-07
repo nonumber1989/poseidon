@@ -1,4 +1,9 @@
 {
+  "home": {
+    "url": "/home",
+    "templateUrl": "views/layout/cover.html",
+    "controller": "LayoutController"
+  },
   "about": {
     "url": "/about",
     "templateUrl": "../views/common/about.html",

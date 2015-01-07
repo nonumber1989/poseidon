@@ -25,8 +25,8 @@ var asgard =
     'pascalprecht.translate'
   ])
 asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider,$translateProvider,navigationProvider){
-
-
+  navigationProvider.setNavigationUrl('api/navigation.json');
+  //i18nProvider.setI18nUrl('');
   $translateProvider.translations('en', {
     TITLE: 'Hello',
     FOO: 'This is a paragraph.',
@@ -40,15 +40,15 @@ asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider,$tra
     BUTTON_LANG_DE: 'deutsch'
   });
   $translateProvider.preferredLanguage('de');
-    // For any unmatched url, send to /route1
-    $urlRouterProvider.otherwise("/home")
+  $urlRouterProvider.otherwise("/home");
     $stateProvider
-        .state('home', {
-            url: "/home",
-            templateUrl: "views/layout/cover.html",
-            controller:"LayoutController"
-        });
-  navigationProvider.setNavigationUrl('api/navigation.json');
+      .state('home', {
+        url: "/home",
+        templateUrl: "views/layout/cover.html",
+        controller:"LayoutController"
+      });
+
+
 });
 asgard.run(function(navigation){
   navigation.setUpNavigation();
