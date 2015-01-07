@@ -23,7 +23,9 @@ var asgard =
     'angularFileUpload',
     'pascalprecht.translate'
   ])
-asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider,$translateProvider){
+asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider,$translateProvider,navigationProvider){
+
+
   $translateProvider.translations('en', {
     TITLE: 'Hello',
     FOO: 'This is a paragraph.',
@@ -37,61 +39,16 @@ asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider,$tra
     BUTTON_LANG_DE: 'deutsch'
   });
   $translateProvider.preferredLanguage('de');
-
     // For any unmatched url, send to /route1
     $urlRouterProvider.otherwise("/home")
-
     $stateProvider
-        //home state and home page
         .state('home', {
             url: "/home",
             templateUrl: "views/layout/cover.html",
             controller:"LayoutController"
-        })
-        .state('about', {
-            url: "/about",
-            templateUrl: "../views/common/about.html",
-            controller:"AboutController"
-        })
-        .state('contact', {
-            url: "/contact",
-            templateUrl: "../views/common/contact.html",
-            controller:"ContactController"
-        })
-        .state('artwork', {
-            url: "/artwork",
-            templateUrl: "../views/artwork/artwork.html",
-            controller:"ArtworkController"
-        })
-        .state('artwork.detail', {
-            url: "/artworkDetail",
-            templateUrl: "../views/artwork/artworkDetail.html",
-            controller:"ArtworkDetailController"
-        })
-        .state('asgard', {
-            url: "/asgard",
-            templateUrl: "views/asgard.html",
-            controller:"AsgardController"
-        })
-        .state('asgard.setting', {
-            url: "/setting/:status",
-            templateUrl: "views/setting/setting.html",
-            controller:"SettingController"
-        })
-        .state('asgard.subject', {
-            url: "/subject",
-            templateUrl: "views/subject/subject.html",
-            controller:"SubjectController"
-        })
-        .state('asgard.account', {
-            url: "/account",
-            templateUrl: "views/account/account.html",
-            controller:"AccountController"
-        })
-//        .state('asgard.artwork', {
-//            url: "/artwork",
-//            templateUrl: "../views/asgard/artwork.html",
-//            controller:"ArtworkController"
-//        })
-
+        });
+  navigationProvider.setNavigationUrl('api/navigation.json');
+});
+asgard.run(function(navigation){
+  navigation.setUpNavigation();
 });

@@ -1,0 +1,48 @@
+{
+  "about": {
+    "url": "/about",
+    "templateUrl": "../views/common/about.html",
+    "controller": "AboutController"
+  },
+  "contact": {
+    "url": "/contact",
+    "templateUrl": "../views/common/contact.html",
+    "controller": "ContactController"
+  },
+  "artwork": {
+    "url": "/artwork",
+    "templateUrl": "../views/artwork/artwork.html",
+    "controller": "ArtworkController"
+  },
+  "artwork.detail": {
+    "url": "/artworkDetail",
+    "templateUrl": "../views/artwork/artworkDetail.html",
+    "controller": "ArtworkDetailController"
+  },
+  "asgard": {
+    "url": "/asgard",
+    "templateUrl": "views/asgard.html",
+    "controller": "AsgardController"
+  },
+  "asgard.setting": {
+    "url": "/setting/:status",
+    "templateUrl": "views/setting/setting.html",
+    "controller": "SettingController"
+  },
+  "asgard.subject": {
+    "url": "/subject",
+    "templateUrl": "views/subject/subject.html",
+    "controller": "SubjectController"
+  },
+  "asgard.account": {
+    "url": "/account",
+    "templateUrl": "views/account/account.html",
+    "controller": "AccountController"
+  },
+  "asgard.artwork": {
+    "url": "/artwork",
+    "templateUrl": "../views/asgard/artwork.html",
+    "controller": "ArtworkController"
+  }
+}
+
