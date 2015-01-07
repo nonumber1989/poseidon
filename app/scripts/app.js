@@ -24,9 +24,9 @@ var asgard =
     'angularFileUpload',
     'pascalprecht.translate'
   ])
-asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider,$translateProvider,navigationProvider){
+asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider,$translateProvider,navigationProvider,i18nProvider){
   navigationProvider.setNavigationUrl('api/navigation.json');
-  //i18nProvider.setI18nUrl('');
+  //i18nProvider.setI18nUrl('api/i18n/en.json');
   $translateProvider.translations('en', {
     TITLE: 'Hello',
     FOO: 'This is a paragraph.',
@@ -50,6 +50,6 @@ asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider,$tra
 
 
 });
-asgard.run(function(navigation){
+asgard.run(function(navigation,i18n){
   navigation.setUpNavigation();
 });
