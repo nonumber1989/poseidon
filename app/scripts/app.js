@@ -25,10 +25,14 @@ var asgard =
     'pascalprecht.translate'
   ])
 asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider,$translateProvider,navigationProvider,i18nProvider){
+  $translateProvider.useStaticFilesLoader({
+    prefix: '/api/languages/',
+    suffix: '.json'
+  });
   navigationProvider.setNavigationUrl('api/navigation.json');
-  var i18nUrls = ['api/i18n/en.json','api/i18n/de.json'];
-  i18nProvider.setI18nUrlArray(i18nUrls);
-  $translateProvider.preferredLanguage('de');
+  //var i18nUrls = ['api/i18n/en.json','api/i18n/zh.json'];
+  //i18nProvider.setI18nUrlArray(i18nUrls);
+  $translateProvider.preferredLanguage('zh');
   $urlRouterProvider.otherwise("/home");
     $stateProvider
       .state('home', {
@@ -39,5 +43,5 @@ asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider,$tra
 });
 asgard.run(function(navigation,i18n){
   navigation.setUpNavigation();
-  i18n.setUpI18nByArray();
+  //i18n.setUpI18nByArray();
 });

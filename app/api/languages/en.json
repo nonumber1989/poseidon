@@ -1,5 +1,4 @@
 {
-  "i18n": {
     "home": "Home",
     "contact":"Contact",
     "about":"About",
@@ -8,6 +7,4 @@
     "setting.password": "Password",
     "setting.notification": "Notification",
     "setting.filter": "Filter"
-  },
-  "language": "en"
 }

@@ -6,10 +6,11 @@
         </div>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a ui-sref="asgard">Home</a></li>
+                <li class="active"><a ui-sref="asgard">{{ 'home' | translate }}</a></li>
                 <li><a ui-sref=".subject">Subjects</a></li>
                 <li><a ui-sref=".explore">Explore</a></li>
                 <li><a ui-sref="artwork">Artwork</a></li>
+				<li><a ui-sref="location">Location</a></li>
                 <li><a popover-placement="bottom" popover="{{messagePopover}}" popover-title="{{messagePopoverTitle}}">Message</a></li>
             </ul>
             <form class="navbar-form navbar-left">
@@ -28,8 +29,8 @@
                         <li><a class="glyphicon glyphicon-off" aria-hidden="true" ui-sref=".artwork">--Logout</a></li>
                     </ul>
                 </li>
-                <li><a ui-sref="about">About</a></li>
-                <li><a ui-sref="contact">Contact</a></li>
+                <li><a ui-sref="about">{{ 'about' | translate }}</a></li>
+                <li><a ui-sref="contact">{{ 'contact' | translate }}</a></li>
             </ul>
         </div>
     </div>

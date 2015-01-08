@@ -1,0 +1,10 @@
+{
+    "home": "主页",
+    "contact":"联系人",
+    "about":"关于",
+    "setting": "设置",
+    "setting.account": "账号",
+    "setting.password": "密码",
+    "setting.notification": "通知",
+    "setting.filter": "过滤器"
+}
