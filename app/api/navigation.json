@@ -25,6 +25,11 @@
       "templateUrl": "../views/artwork/artworkDetail.html",
       "controller": "ArtworkDetailController"
     },
+    "location": {
+      "url": "/location",
+      "templateUrl": "../views/location/location.html",
+      "controller": "LocationController"
+    },
     "asgard": {
       "url": "/asgard",
       "templateUrl": "views/asgard.html",
