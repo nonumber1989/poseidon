@@ -26,9 +26,9 @@ var asgard =
   ])
 asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider,$translateProvider,navigationProvider,i18nProvider){
   navigationProvider.setNavigationUrl('api/navigation.json');
-  var i18nUrls = ['api/i18n/en.json','api/i18n/de.json'];
+  var i18nUrls = ['api/i18n/en.json','api/i18n/zh.json'];
   i18nProvider.setI18nUrlArray(i18nUrls);
-  $translateProvider.preferredLanguage('de');
+  $translateProvider.preferredLanguage('zh');
   $urlRouterProvider.otherwise("/home");
     $stateProvider
       .state('home', {

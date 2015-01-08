@@ -1,21 +1,21 @@
 [
     {
-        "field":"account",
+        "field":"setting.account",
         "title": "Account",
         "content": "views/setting/account.html"
     },
     {
-        "field":"password",
+        "field":"setting.password",
         "title": "Password",
         "content": "views/setting/password.html"
     },
     {
-        "field":"notification",
+        "field":"setting.notification",
         "title": "Notification",
         "content": "views/setting/notification.html"
     },
     {
-        "field":"filter",
+        "field":"setting.filter",
         "title": "Filter",
         "content": "views/setting/filter.html"
     }
