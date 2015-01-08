@@ -15,6 +15,7 @@
     "angular-bootstrap":"~0.12.0",
     "angular-ui-router":"~0.2.13",
     "angular-translate":"~2.5.2",
+    "angular-translate-loader-static-files":"~2.5.2",
     "angular-file-upload":"~1.1.5",
     "ngInfiniteScroll":"~1.2.0",
     "ng-sortable": "~1.1.9",

@@ -1,0 +1,10 @@
+{
+    "home": "Home",
+    "contact":"Contact",
+    "about":"About",
+    "setting": "Setting",
+    "setting.account": "Account",
+    "setting.password": "Password",
+    "setting.notification": "Notification",
+    "setting.filter": "Filter"
+}
