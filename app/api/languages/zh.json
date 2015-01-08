@@ -6,5 +6,11 @@
     "setting.account": "账号",
     "setting.password": "密码",
     "setting.notification": "通知",
-    "setting.filter": "过滤器"
+    "setting.filter": "过滤器",
+"location":"同城",
+"location.exhibition":"展览",
+"location.other":"其他",
+"location.lecture":"演讲",
+"location.movie":"电影",
+"location.gathering":"聚会"
 }

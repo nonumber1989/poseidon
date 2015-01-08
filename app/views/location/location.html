@@ -10,7 +10,28 @@
                 <span><li class="glyphicon glyphicon-fast-forward"></li></span>
             </span>
         </div>
-        <div class="panel-body"></div>
+        <div class="panel-body">
+            <div class="row-fluid">
+                <div class="col-md-6" ng-repeat="gathering in gatherings">
+                    <div class="thumbnail">
+                        <div class="row caption">
+                            <div class="col-md-4">
+                                <img src="images/yeoman.png" width="80" height="80">
+                            </div>
+                            <div class="col-md-8">
+                                <a><small>{{gathering.title}}</small></a>
+                                <div>{{gathering.startTime}}</div>
+                                <address >
+                                    <strong>{{gathering.address}}</strong>
+                                    <br>
+                                    <abbr title="Phone">Phone:</abbr> (123) 456-7890
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
       </section>
       <hr>
       <section class="panel panel-default">
@@ -38,6 +59,10 @@
       </section>
     </section>
     <section class="col-md-3">
+        <hr>
+       <div class="thumbnail">
+           <img src="images/internet.jpg" width="195">
+       </div>
       <hr>
       <section class="panel panel-default">
         <div class="panel-heading">
