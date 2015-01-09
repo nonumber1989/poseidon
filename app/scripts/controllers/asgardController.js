@@ -7,8 +7,8 @@ asgard.controller('AsgardController', ['$scope','$resource','$modal', '$log','$t
     $translate.use(key);
   };
 
-    $scope.accountResource = $resource('api/people/account.json');
-    $scope.accountResource.get(function(data){
+    $scope.gatheringResource = $resource('api/people/account.json');
+    $scope.gatheringResource.get(function(data){
         $scope.currentAccount = data;
     });
 
