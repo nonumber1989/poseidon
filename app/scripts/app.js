@@ -24,7 +24,7 @@ var asgard =
     'angularFileUpload',
     'pascalprecht.translate'
   ])
-asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider,$translateProvider,navigationProvider,i18nProvider){
+asgard.config(['$stateProvider', '$urlRouterProvider','$resourceProvider','$translateProvider','navigationProvider','i18nProvider',function($stateProvider, $urlRouterProvider,$resourceProvider,$translateProvider,navigationProvider,i18nProvider){
   $translateProvider.useStaticFilesLoader({
     prefix: '/api/languages/',
     suffix: '.json'
@@ -40,8 +40,12 @@ asgard.config(function($stateProvider, $urlRouterProvider,$resourceProvider,$tra
         templateUrl: "views/layout/cover.html",
         controller:"LayoutController"
       });
-});
-asgard.run(function(navigation,i18n){
-  navigation.setUpNavigation();
-  //i18n.setUpI18nByArray();
-});
+}]);
+asgard.run([ '$rootScope', '$state', '$stateParams','navigation','i18n',function ($rootScope,  $state,   $stateParams,navigation,i18n) {
+	  navigation.setUpNavigation();
+      //i18n.setUpI18nByArray();
+    $rootScope.$state = $state;
+    $rootScope.$stateParams = $stateParams;
+    }
+  ]
+);
