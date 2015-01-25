@@ -20,6 +20,7 @@ var asgard =
     'ui.router',
     'ui.bootstrap',
     'ui.sortable',
+    'http-auth-interceptor',
     'infinite-scroll',
     'angularFileUpload',
     'pascalprecht.translate'
@@ -41,11 +42,12 @@ asgard.config(['$stateProvider', '$urlRouterProvider','$resourceProvider','$tran
         controller:"LayoutController"
       });
 }]);
-asgard.run([ '$rootScope', '$state', '$stateParams','navigation','i18n',function ($rootScope,  $state,   $stateParams,navigation,i18n) {
+asgard.run([ '$rootScope', '$state', '$stateParams','navigation','i18n','$http',function ($rootScope,  $state,   $stateParams,navigation,i18n,$http) {
 	  navigation.setUpNavigation();
       //i18n.setUpI18nByArray();
     $rootScope.$state = $state;
     $rootScope.$stateParams = $stateParams;
+        $http.defaults.headers.common.Authorization = 'Basic c2V2ZW46c2V2ZW4='
     }
   ]
 );
