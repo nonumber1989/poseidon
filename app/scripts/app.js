@@ -21,6 +21,7 @@ var asgard =
     'ui.bootstrap',
     'ui.sortable',
     'http-auth-interceptor',
+    'base64',
     'infinite-scroll',
     'angularFileUpload',
     'pascalprecht.translate'
@@ -47,7 +48,7 @@ asgard.run([ '$rootScope', '$state', '$stateParams','navigation','i18n','$http',
       //i18n.setUpI18nByArray();
     $rootScope.$state = $state;
     $rootScope.$stateParams = $stateParams;
-        $http.defaults.headers.common.Authorization = 'Basic c2V2ZW46c2V2ZW4='
+//        $http.defaults.headers.common.Authorization = 'Basic c2V2ZW46c2V2ZW4=';
     }
   ]
 );

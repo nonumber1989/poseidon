@@ -6,7 +6,6 @@ asgard.controller('AsgardController', ['$scope','$resource','$modal', '$log','$t
   $scope.changeLanguage = function (key) {
     $translate.use(key);
   };
-
     $scope.gatheringResource = $resource('api/people/account.json');
     $scope.gatheringResource.get(function(data){
         $scope.currentAccount = data;
