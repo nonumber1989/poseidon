@@ -39,16 +39,15 @@ asgard.config(['$stateProvider', '$urlRouterProvider','$resourceProvider','$tran
     $stateProvider
       .state('home', {
         url: "/home",
-        templateUrl: "views/layout/cover.html",
+        templateUrl: "views/layout/home.html",
         controller:"LayoutController"
       });
 }]);
-asgard.run([ '$rootScope', '$state', '$stateParams','navigation','i18n','$http',function ($rootScope,  $state,   $stateParams,navigation,i18n,$http) {
+asgard.run([ '$rootScope', '$state', '$stateParams','navigation','i18n',function ($rootScope,  $state,   $stateParams,navigation,i18n) {
 	  navigation.setUpNavigation();
       //i18n.setUpI18nByArray();
-    $rootScope.$state = $state;
-    $rootScope.$stateParams = $stateParams;
-//        $http.defaults.headers.common.Authorization = 'Basic c2V2ZW46c2V2ZW4=';
+     $rootScope.$state = $state;
+     $rootScope.$stateParams = $stateParams;
     }
   ]
 );
