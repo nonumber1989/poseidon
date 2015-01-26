@@ -8,12 +8,11 @@ asgard.controller('LayoutController', ['$scope','$resource','$http','authService
     $scope.encoded = $base64.encode($scope.user.username+':'+$scope.user.password);
     $scope.decoded = $base64.decode('c2V2ZW46c2V2ZW4=');
 
-    $scope.submit = function() {
+    $scope.signIn = function() {
         $http.defaults.headers.common.Authorization = 'Basic c2V2ZW46c2V2ZW4=';
         $scope.testResource.query(function(result){
             console.log($scope.decoded+'------nonumber1989');
             console.log($scope.encoded+'------nonumber198222229');
-
         });
 //        $http.defaults.headers.common.Authorization = 'Basic c2V2ZW46c2V2ZW4=';
 //        $http.post('http://localhost:9090/warship/user/signIn').success(function() {

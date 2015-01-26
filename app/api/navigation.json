@@ -2,7 +2,7 @@
   "navigation": {
     "home": {
       "url": "/home",
-      "templateUrl": "views/layout/cover.html",
+      "templateUrl": "views/layout/home.html",
       "controller": "LayoutController"
     },
     "about": {
