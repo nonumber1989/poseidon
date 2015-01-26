@@ -2,41 +2,49 @@
     <section class="jumbotron">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <div class="page-header text-center">
                         <h1>知乎</h1>
                         <small>与世界分享你的知识经验与见解</small>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <form class="form-signIn">
-                        <div class="input-group">
-                            <span class="input-group-addon" id="email">@</span>
-                            <input type="email" class="form-control" placeholder="Email address" aria-describedby="email">
+                <div class="col-md-4">
+                    <div class="row">
+                        <form class="col-md-8">
+                            <div class="form-group">
+                                <label class="sr-only" for="email">Email address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="password">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Password">
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Remember me
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" style="padding: 5px">Sign in</button>
+                        </form>
+                        <div class="col-md-4">
+
                         </div>
-                        <input type="password" class="form-control" placeholder="Password" required>
-                        <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="remember-me"> Remember me
-                            </label>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section class="container">
-        <div class="col-md-6">
-            <ul class="list-group">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Morbi leo risus</li>
-                <li class="list-group-item">Porta ac consectetur ac</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
+        <div class="col-md-4">
+            <div ng-repeat="artwork in artworks">
+                <div class="col-md-4">
+                    <a class="thumbnail">
+                            <img src="images/yeoman.png" alt="..." class="img-circle caption">
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-8">
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title">Panel title</h3>

@@ -19,5 +19,8 @@ asgard.controller('LayoutController', ['$scope','$resource','$http','authService
 //            authService.loginConfirmed();
 //        });
     };
-
+    $scope.artworkResource = $resource('api/artwork/artwork.json');
+    $scope.artworkResource.query(function(data){
+        $scope.artworks = data;
+    });
 }]);
