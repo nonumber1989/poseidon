@@ -1,6 +1,27 @@
 <div ui-view>
   <div class="container">
     <section class="col-md-9">
+        <section class="panel panel-default">
+            <div class="panel-heading">
+                <span class="panel-title"><strong>热门活动</strong></span>
+            <span class="pull-right">
+                <span><li class="glyphicon glyphicon-fast-backward"></li></span>
+                <span><li class="glyphicon glyphicon-fast-forward"></li></span>
+            </span>
+            </div>
+            <div class="panel-body">
+                <div class="row-fluid">
+                    <div class="col-md-3" ng-repeat="gathering in gatherings">
+                        <div class="thumbnail">
+                            <img src="images/yeoman.png">
+                            <p class="caption">
+                                <a class="text-center"><small>{{gathering.title}}</small></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
       <hr>
       <section class="panel panel-default">
         <div class="panel-heading">
