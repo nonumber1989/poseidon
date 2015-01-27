@@ -45,6 +45,11 @@
       "templateUrl": "views/subject/subject.html",
       "controller": "SubjectController"
     },
+      "asgard.subject.detail": {
+          "url": "/:id",
+          "templateUrl": "views/subject/subjectDetail.html",
+          "controller": "SubjectDetailController"
+      },
     "asgard.account": {
       "url": "/account",
       "templateUrl": "views/account/account.html",
