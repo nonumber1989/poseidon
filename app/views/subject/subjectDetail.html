@@ -14,13 +14,13 @@
                         </h3>
                     </div>
                     <div class="col-md-10">
-                        <div><a ui-sref=".detail"><strong>{{subject.title}}</strong></a>
+                        <div><strong>{{subject.title}}</strong>
                             <span ng-show="toolShow">
                             <a ng-click="pinSubject(subject)"><li class="glyphicon glyphicon-pushpin"></li>固定话题</a>
                             <a ng-click="cancelFollowSubject(subject)" class="pull-right">取消关注</a>
                             </span>
                         </div>
-                         <hr>
+                        <hr>
                         <div ng-repeat="topic in subject.subjects">
                             <h6><a>{{topic.title}}</a><span> {{topic.createTime}} 秒前创建</span></h6>
                         </div>
@@ -45,7 +45,7 @@
                             </span>
                         </div>
                         <div as-sortable-item-handle class="as-sortable-item-handle">
-                           <span>{{item.topics}}话题</span>
+                            <span>{{item.topics}}话题</span>
                             <span class="pull-right">{{item.follower}}追随</span>
                         </div>
                     </li>
