@@ -50,6 +50,11 @@
           "templateUrl": "views/topic/topicDetail.html",
           "controller": "TopicDetailController"
       },
+      "asgard.topic.follower": {
+          "url": "/:id/follower",
+          "templateUrl": "views/topic/topicFollowers.html",
+          "controller": "TopicDetailController"
+      },
     "asgard.account": {
       "url": "/account",
       "templateUrl": "views/account/account.html",

@@ -1,5 +1,6 @@
 <div>
     <div class="container">
+        <div ui-view>
         <section class="col-md-8">
             <span><li class="glyphicon glyphicon-list"></li><strong>话题动态</strong></span>
             <a class="pull-right">共关注30个话题</a>
@@ -32,7 +33,7 @@
         </section>
         <section class="col-md-4">
             <button type="button" class="btn btn-primary">Follow</button>
-            <span><a>1115783</a> 人关注了该话题</span>
+            <span><a ng-href="#/asgard/topic/{{subject.id}}/follower">1115783</a> 人关注了该话题</span>
             <div>
 
             </div>
@@ -46,16 +47,6 @@
                 </div>
             </div>
         </section>
-
+      </div>
     </div>
 </div>
-
-<style>
-    /* Styles go here */
-    .as-sortable-item,
-    .as-sortable-placeholder {
-        margin: 5px;
-        border-radius: 5px;
-        list-style: none;
-    }
-</style>
