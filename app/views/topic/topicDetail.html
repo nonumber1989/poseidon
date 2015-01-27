@@ -14,14 +14,13 @@
                         </h3>
                     </div>
                     <div class="col-md-10">
-                        <div>
-                            <a ng-href="#/asgard/subject/{{subject.id}}"><strong>{{subject.title}}</strong></a>
+                        <div><strong>{{subject.title}}</strong>
                             <span ng-show="toolShow">
                             <a ng-click="pinSubject(subject)"><li class="glyphicon glyphicon-pushpin"></li>固定话题</a>
                             <a ng-click="cancelFollowSubject(subject)" class="pull-right">取消关注</a>
                             </span>
                         </div>
-                         <hr>
+                        <hr>
                         <div ng-repeat="topic in subject.subjects">
                             <h6><a>{{topic.title}}</a><span> {{topic.createTime}} 秒前创建</span></h6>
                         </div>
@@ -32,28 +31,20 @@
             </div>
         </section>
         <section class="col-md-4">
-            <span><strong>常去话题</strong></span>
-            <hr>
+            <button type="button" class="btn btn-primary">Follow</button>
+            <span><a>1115783</a> 人关注了该话题</span>
             <div>
-                <ul as-sortable="sortableOptions" ng-model="favoriteSubjects" class="list-group">
-                    <li ng-repeat="item in favoriteSubjects" as-sortable-item class="as-sortable-item list-group-item">
-                        <div>
-                            <img src="images/yeoman.png"  width="30px" height="30px">
-                            <span data-ng-bind="item.title"></span>
-                            <span class="pull-right">
-                                <a ng-click="cancelFollowSubject(item)" tooltip-placement="top" tooltip="取消订阅"><i class="glyphicon glyphicon-remove-sign"></i></a>
-                                <a ng-click="topFollowSubject(item)" tooltip-placement="top" tooltip="置顶"><i class="glyphicon glyphicon-circle-arrow-up"></i></a>
-                            </span>
-                        </div>
-                        <div as-sortable-item-handle class="as-sortable-item-handle">
-                           <span>{{item.topics}}话题</span>
-                            <span class="pull-right">{{item.follower}}追随</span>
-                        </div>
-                    </li>
-                </ul>
-                <a class="pull-right"><li class="glyphicon glyphicon-th-large"></li>话题广场</a>
-            </div>
 
+            </div>
+            <hr>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>描述</strong></h3>
+                </div>
+                <div class="panel-body">
+                    国际互联网（Internetwork，简称Internet），始于1969年的美国，又称因特网，是全球性的网络，是一种公用信息的载体，是大众传媒国际互联网，始于1969年的美国，又称因特网，是全球性的网络，是一种公用信息的载体，是大众传媒的一种。具有快捷性、普及性，是现今最流行、最受欢迎的传媒之一。这种大众传媒比以往的任何一种通讯媒体都要快。互联网是由一些使用公用语言互相通信的计算机连接而成的网络，即广域网、局域网及单机按照一定的通讯协议组成的国际计算机网络。媒的一种。具有快捷性、普及性，是现今最流行、最
+                </div>
+            </div>
         </section>
 
     </div>
