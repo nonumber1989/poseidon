@@ -1,1 +1,45 @@
-<a class="text-center" ng-href="#/location/host/99">Go To Host Detail</a>
+<div ui-view>
+    <div class="container">
+        <section class="col-md-9">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>主办方活动</strong></div>
+                <!--<div class="panel-body">-->
+                <!--</div>-->
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="host in hosts">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="images/internet.jpg" width="48" height="48">
+                            </div>
+                            <div class="col-md-9">
+                                        {{host.title}}
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="col-md-3">
+            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                <div class="btn-group" role="group">
+                    <a class="btn btn-default" ng-href="#/location/host/explore" role="button">更多主办方</a>
+                </div>
+                <div class="btn-group" role="group">
+                    <a class="btn btn-default" href="#" role="button">主办方入驻</a>
+                </div>
+            </div>
+            <hr>
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>我关注的主办方</strong></div>
+                <!--<div class="panel-body">-->
+                <!--</div>-->
+                <li class="list-group-item"><a href="#" class="active">全部<span class="badge pull-right">48</span></a></li>
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="sponsor in sponsors">
+                        <a href="#">{{sponsor.name}} <span class="badge pull-right">{{sponsor.hosts}}</span></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="navbar navbar-default">
+    <!--<div class="navbar navbar-inverse navbar-fixed-top">-->
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="home">Location</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a ui-sref="asgard">同城</a></li>
+                <li><a ui-sref=".topic">同城活动</a></li>
+                <li><a  ng-href="#/location/host">主办方</a></li>
+                <li><a ui-sref="artwork">我的同城</a></li>
+                <li><a popover-placement="bottom" popover="{{messagePopover}}" popover-title="{{messagePopoverTitle}}">Message</a></li>
+            </ul>
+            <form class="navbar-form navbar-left">
+                <input type="text" class="form-control" placeholder="Search">
+            </form>
+    </div>
+</div>
