@@ -3,17 +3,27 @@
         <section class="col-md-9">
             <div class="panel panel-default">
                 <div class="panel-heading"><strong>主办方活动</strong></div>
-                <!--<div class="panel-body">-->
-                <!--</div>-->
-                <ul class="list-group">
-                    <li class="list-group-item" ng-repeat="host in hosts">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <img src="images/internet.jpg" width="48" height="48">
-                            </div>
-                            <div class="col-md-9">
-                                        {{host.title}}
-                            </div>
+                <!--<ul class="list-group">-->
+                    <!--<li class="list-group-item" ng-repeat="host in hosts">-->
+                        <!--<div class="row">-->
+                            <!--<div class="col-md-3">-->
+                                <!--<img src="images/internet.jpg" width="48" height="48">-->
+                            <!--</div>-->
+                            <!--<div class="col-md-9">-->
+                                        <!--{{host.title}}-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                <!--</ul>-->
+                <ul class="media-list">
+                    <li class="media" ng-repeat="host in hosts">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="images/internet.jpg" width="48" height="48" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            {{host.title}}
                         </div>
                     </li>
                 </ul>
