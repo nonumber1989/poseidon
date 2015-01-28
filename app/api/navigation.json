@@ -1,71 +1,86 @@
 {
-  "navigation": {
-    "home": {
-      "url": "/home",
-      "templateUrl": "views/layout/home.html",
-      "controller": "LayoutController"
+    "navigation": {
+        "home": {
+            "url": "/home",
+            "templateUrl": "views/layout/home.html",
+            "controller": "LayoutController"
+        },
+        "about": {
+            "url": "/about",
+            "templateUrl": "../views/common/about.html",
+            "controller": "AboutController"
+        },
+        "contact": {
+            "url": "/contact",
+            "templateUrl": "../views/common/contact.html",
+            "controller": "ContactController"
+        },
+        "account": {
+            "url": "/account/:id",
+            "templateUrl": "views/account/account.html",
+            "controller": "AccountController"
+        },
+        "setting": {
+            "url": "/setting/:status",
+            "templateUrl": "views/setting/setting.html",
+            "controller": "SettingController"
+        },
+        "artwork": {
+            "url": "/artwork",
+            "templateUrl": "../views/artwork/artwork.html",
+            "controller": "ArtworkController"
+        },
+        "artwork.detail": {
+            "url": "/:id",
+            "templateUrl": "../views/artwork/artworkDetail.html",
+            "controller": "ArtworkDetailController"
+        },
+        "location": {
+            "url": "/location",
+            "templateUrl": "../views/location/location.html",
+            "controller": "LocationController"
+        },
+        "location.event": {
+            "url": "/event",
+            "templateUrl": "../views/location/event/event.html",
+            "controller": "EventController"
+        },
+        "location.event.detail": {
+            "url": "/:id",
+            "templateUrl": "../views/location/event/eventDetail.html",
+            "controller": "EventDetailController"
+        },
+        "location.host": {
+            "url": "/host",
+            "templateUrl": "../views/location/host/host.html",
+            "controller": "HostController"
+        },
+        "location.host.detail": {
+            "url": "/:id",
+            "templateUrl": "../views/location/host/hostDetail.html",
+            "controller": "HostDetailController"
+        },
+        "asgard": {
+            "url": "/asgard",
+            "templateUrl": "views/asgard.html",
+            "controller": "AsgardController"
+        },
+        "asgard.topic": {
+            "url": "/topic",
+            "templateUrl": "views/topic/topic.html",
+            "controller": "TopicController"
+        },
+        "asgard.topic.detail": {
+            "url": "/:id",
+            "templateUrl": "views/topic/topicDetail.html",
+            "controller": "TopicDetailController"
+        },
+        "asgard.topic.follower": {
+            "url": "/:id/follower",
+            "templateUrl": "views/topic/topicFollowers.html",
+            "controller": "TopicFollowerController"
+        }
     },
-    "about": {
-      "url": "/about",
-      "templateUrl": "../views/common/about.html",
-      "controller": "AboutController"
-    },
-    "contact": {
-      "url": "/contact",
-      "templateUrl": "../views/common/contact.html",
-      "controller": "ContactController"
-    },
-    "artwork": {
-      "url": "/artwork",
-      "templateUrl": "../views/artwork/artwork.html",
-      "controller": "ArtworkController"
-    },
-    "artwork.detail": {
-      "url": "/artworkDetail",
-      "templateUrl": "../views/artwork/artworkDetail.html",
-      "controller": "ArtworkDetailController"
-    },
-    "location": {
-      "url": "/location",
-      "templateUrl": "../views/location/location.html",
-      "controller": "LocationController"
-    },
-    "asgard": {
-      "url": "/asgard",
-      "templateUrl": "views/asgard.html",
-      "controller": "AsgardController"
-    },
-    "asgard.setting": {
-      "url": "/setting/:status",
-      "templateUrl": "views/setting/setting.html",
-      "controller": "SettingController"
-    },
-    "asgard.topic": {
-      "url": "/topic",
-      "templateUrl": "views/topic/topic.html",
-      "controller": "TopicController"
-    },
-      "asgard.topic.detail": {
-          "url": "/:id",
-          "templateUrl": "views/topic/topicDetail.html",
-          "controller": "TopicDetailController"
-      },
-      "asgard.topic.follower": {
-          "url": "/:id/follower",
-          "templateUrl": "views/topic/topicFollowers.html",
-          "controller": "TopicDetailController"
-      },
-    "asgard.account": {
-      "url": "/account",
-      "templateUrl": "views/account/account.html",
-      "controller": "AccountController"
-    },
-    "asgard.artwork": {
-      "url": "/artwork",
-      "templateUrl": "../views/asgard/artwork.html",
-      "controller": "ArtworkController"
-    }
-  },
-  "otherwise": "/home"
+    "otherwise": "/home"
 }
 
