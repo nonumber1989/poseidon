@@ -40,15 +40,20 @@
       "templateUrl": "views/setting/setting.html",
       "controller": "SettingController"
     },
-    "asgard.subject": {
-      "url": "/subject",
-      "templateUrl": "views/subject/subject.html",
-      "controller": "SubjectController"
+    "asgard.topic": {
+      "url": "/topic",
+      "templateUrl": "views/topic/topic.html",
+      "controller": "TopicController"
     },
-      "asgard.subject.detail": {
+      "asgard.topic.detail": {
           "url": "/:id",
-          "templateUrl": "views/subject/subjectDetail.html",
-          "controller": "SubjectDetailController"
+          "templateUrl": "views/topic/topicDetail.html",
+          "controller": "TopicDetailController"
+      },
+      "asgard.topic.follower": {
+          "url": "/:id/follower",
+          "templateUrl": "views/topic/topicFollowers.html",
+          "controller": "TopicDetailController"
       },
     "asgard.account": {
       "url": "/account",

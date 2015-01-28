@@ -1,0 +1,52 @@
+<div>
+    <div class="container">
+        <div ui-view>
+        <section class="col-md-8">
+            <span><li class="glyphicon glyphicon-list"></li><strong>话题动态</strong></span>
+            <a class="pull-right">共关注30个话题</a>
+            <hr>
+            <div ng-repeat="subject in subjects" >
+                <div class="row" ng-mouseenter="toolShow = true" ng-mouseleave="toolShow = false">
+                    <div class="col-md-2">
+                        <h3>
+                            <div class="thumbnail">
+                                <img src="images/internet.jpg">
+                            </div>
+                        </h3>
+                    </div>
+                    <div class="col-md-10">
+                        <div><strong>{{subject.title}}</strong>
+                            <span ng-show="toolShow">
+                            <a ng-click="pinSubject(subject)"><li class="glyphicon glyphicon-pushpin"></li>固定话题</a>
+                            <a ng-click="cancelFollowSubject(subject)" class="pull-right">取消关注</a>
+                            </span>
+                        </div>
+                        <hr>
+                        <div ng-repeat="topic in subject.subjects">
+                            <h6><a>{{topic.title}}</a><span> {{topic.createTime}} 秒前创建</span></h6>
+                        </div>
+                    </div>
+
+                </div>
+                <hr>
+            </div>
+        </section>
+        <section class="col-md-4">
+            <button type="button" class="btn btn-primary">Follow</button>
+            <span><a ng-href="#/asgard/topic/{{subject.id}}/follower">1115783</a> 人关注了该话题</span>
+            <div>
+
+            </div>
+            <hr>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>描述</strong></h3>
+                </div>
+                <div class="panel-body">
+                    国际互联网（Internetwork，简称Internet），始于1969年的美国，又称因特网，是全球性的网络，是一种公用信息的载体，是大众传媒国际互联网，始于1969年的美国，又称因特网，是全球性的网络，是一种公用信息的载体，是大众传媒的一种。具有快捷性、普及性，是现今最流行、最受欢迎的传媒之一。这种大众传媒比以往的任何一种通讯媒体都要快。互联网是由一些使用公用语言互相通信的计算机连接而成的网络，即广域网、局域网及单机按照一定的通讯协议组成的国际计算机网络。媒的一种。具有快捷性、普及性，是现今最流行、最
+                </div>
+            </div>
+        </section>
+      </div>
+    </div>
+</div>
