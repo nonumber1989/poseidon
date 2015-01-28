@@ -1,4 +1,7 @@
 <div ui-view>
+    <div>
+        <a class="text-center" ng-href="#/location/host">Go To Host</a>
+    </div>
   <div class="container">
     <section class="col-md-9">
         <section class="panel panel-default">
@@ -15,7 +18,7 @@
                         <div class="thumbnail">
                             <img src="images/yeoman.png">
                             <p class="caption">
-                                <a class="text-center"><small>{{gathering.title}}</small></a>
+                                <a class="text-center" ng-href="#/location/event/{{gathering.follower}}"><small>{{gathering.title}}</small></a>
                             </p>
                         </div>
                     </div>
