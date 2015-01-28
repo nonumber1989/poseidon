@@ -13,7 +13,7 @@
             <div class="panel-body">
                 <div ng-repeat="artwork in artworks">
                     <div class="col-md-3">
-                        <a ui-sref=".detail" class="thumbnail" ng-mouseenter="showDetail = true" ng-mouseleave="showDetail = false">
+                        <a ng-href="#/artwork/{{artwork.id}}" class="thumbnail" ng-mouseenter="showDetail = true" ng-mouseleave="showDetail = false">
                             <div class="caption" ng-show="showDetail">
                                 <div style="height: 170px">
                                     <div>{{artwork.title}}</div>
