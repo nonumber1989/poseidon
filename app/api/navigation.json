@@ -55,6 +55,11 @@
             "templateUrl": "../views/location/host/host.html",
             "controller": "HostController"
         },
+        "location.host.explore": {
+            "url": "/explore",
+            "templateUrl": "../views/location/host/hostExplore.html",
+            "controller": "HostExploreController"
+        },
         "location.host.detail": {
             "url": "/:id",
             "templateUrl": "../views/location/host/hostDetail.html",
