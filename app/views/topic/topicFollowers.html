@@ -2,16 +2,27 @@
     <div class="container">
         <div ui-view>
             <section class="col-md-8">
-                <span><li class="glyphicon glyphicon-list"></li><strong>互联网</strong></span>
-                <a class="pull-right">共关注30个话题</a>
-                <hr>
-                <div class="list-group">
-                    <a ng-href="#/account/{{follower.id}}" class="list-group-item" ng-repeat="follower in followers">
-                        <h4 class="list-group-item-heading">{{follower.uid}}</h4>
-                        <p class="list-group-item-text">{{follower.name}}</p>
-                    </a>
+                <div class="page-header">
+                    <span><li class="glyphicon glyphicon-list"></li><strong>互联网</strong></span>
+                    <a class="pull-right">共关注30个话题</a>
                 </div>
 
+                <div class="list-group">
+                    <div class="list-group-item" ng-repeat="follower in followers">
+                        <!-- use media  -->
+                        <div class="media">
+                            <div class="media-left media-middle">
+                                <a ng-href="#/account/{{follower.id}}">
+                                    <img class="media-object" src="images/yeoman.png" alt="..." width="48" height="48">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">{{follower.uid}}</h4>
+                                <p>{{follower.name}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="col-md-4">
                 <button type="button" class="btn btn-primary">Follow</button>
