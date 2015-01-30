@@ -8,7 +8,7 @@ asgard.controller('CollectionDialogController', ['$scope','$log','$modal', '$mod
         item: $scope.collections[0]
     };
 
-    $scope.ok = function () {
+    $scope.save = function () {
         $modalInstance.close($scope.selected.item);
     };
 
@@ -16,12 +16,13 @@ asgard.controller('CollectionDialogController', ['$scope','$log','$modal', '$mod
         $modalInstance.dismiss('cancel');
     };
 
-
+    //dialog to create an new collection
     $scope.openCreateDialog = function (size) {
         var modalInstance = $modal.open({
             templateUrl: 'collectionCreateDialog.html',
             controller: 'CollectionCreateDialogController',
             size: size,
+            //resolve the information
             resolve: {
                 creation: function () {
                     return {id:"sevenup"};
