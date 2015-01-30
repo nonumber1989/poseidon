@@ -7,20 +7,25 @@
                     <a class="pull-right">共关注30个话题</a>
                 </div>
 
-                <div class="list-group">
-                    <div class="list-group-item" ng-repeat="follower in followers">
+                <div class="media-list">
                         <!-- use media  -->
-                        <div class="media">
+                    <div ng-repeat="follower in followers">
+                        <div class="media" >
                             <div class="media-left media-middle">
                                 <a ng-href="#/account/{{follower.id}}">
                                     <img class="media-object" src="images/yeoman.png" alt="..." width="48" height="48">
                                 </a>
                             </div>
-                            <div class="media-body">
+                            <div class="media-body sevenUp-media">
                                 <h4 class="media-heading">{{follower.uid}}</h4>
-                                <p>{{follower.name}}</p>
+                                <div>Someone famous in <cite title="Source Title">Source Title</cite></div>
+                                <div>XXX</div>
+                            </div>
+                            <div class="media-right media-middle">
+                                <button type="button" class="btn btn-primary media-object">Follow</button>
                             </div>
                         </div>
+                        <hr>
                     </div>
                 </div>
             </section>
@@ -43,3 +48,10 @@
         </div>
     </div>
 </div>
+
+        <style>
+            .sevenUp-media{
+                width: 100%;
+                /*border-bottom: 1px solid #ddd;*/
+            }
+        </style>
