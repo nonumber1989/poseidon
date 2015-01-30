@@ -3,8 +3,17 @@
         <div ui-view>
             <section class="col-md-8">
                 <div class="page-header">
-                    <span><li class="glyphicon glyphicon-list"></li><strong>互联网</strong></span>
-                    <a class="pull-right">共关注30个话题</a>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="..." alt="..." height="64" width="64">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h2 class="media-heading">互联网</h2>
+                            <div><a><strong>电影</strong></a> »  1449633 人关注该话题</div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="media-list">
@@ -19,10 +28,10 @@
                             <div class="media-body sevenUp-media">
                                 <h4 class="media-heading">{{follower.uid}}</h4>
                                 <div>Someone famous in <cite title="Source Title">Source Title</cite></div>
-                                <div>XXX</div>
+                                <small class="text-muted">XXX</small>
                             </div>
                             <div class="media-right media-middle">
-                                <button type="button" class="btn btn-primary media-object">Follow</button>
+                                <button type="button" class="btn btn-primary media-object">关注</button>
                             </div>
                         </div>
                         <hr>
@@ -30,18 +39,46 @@
                 </div>
             </section>
             <section class="col-md-4">
-                <button type="button" class="btn btn-primary">Follow</button>
-                <span><a ng-href="#/asgard/topic/{{subject.id}}/follower">1115783</a> 人关注了该话题</span>
-                <div>
-
+                <div class="page-header">
+                    <button type="button" class="btn btn-primary">取消关注</button>
+                    <span><a ng-href="#/asgard/topic/{{subject.id}}/follower">1115783</a> 人关注了该话题</span>
+                    <div class="sevenUp-hr"></div>
+                    <ul class="nav nav-pills">
+                        <li role="presentation"><a href="#">组织</a></li>
+                        <li role="presentation"><a href="#">管理</a></li>
+                        <li role="presentation"><a href="#">日志</a></li>
+                    </ul>
                 </div>
-                <hr>
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title"><strong>描述</strong></h3>
                     </div>
                     <div class="panel-body">
                         国际互联网（Internetwork，简称Internet），始于1969年的美国，又称因特网，是全球性的网络，是一种公用信息的载体，是大众传媒国际互联网，始于1969年的美国，又称因特网，是全球性的网络，是一种公用信息的载体，是大众传媒的一种。具有快捷性、普及性，是现今最流行、最受欢迎的传媒之一。这种大众传媒比以往的任何一种通讯媒体都要快。互联网是由一些使用公用语言互相通信的计算机连接而成的网络，即广域网、局域网及单机按照一定的通讯协议组成的国际计算机网络。媒的一种。具有快捷性、普及性，是现今最流行、最
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>父话题</strong></h3>
+                    </div>
+                    <div class="panel-body">
+                        <button type="button" class="btn btn-info">电影推荐</button>
+                        <button type="button" class="btn btn-info">大片</button>
+                        <button type="button" class="btn btn-info">资源秀</button>
+                        <button type="button" class="btn btn-info">goodBye</button>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>子话题</strong></h3>
+                    </div>
+                    <div class="panel-body">
+                            <button type="button" class="btn btn-info">电影推荐</button>
+                            <button type="button" class="btn btn-info">大片</button>
+                            <button type="button" class="btn btn-info">资源秀</button>
+                            <button type="button" class="btn btn-info">goodBye</button>
                     </div>
                 </div>
             </section>
@@ -53,5 +90,12 @@
             .sevenUp-media{
                 width: 100%;
                 /*border-bottom: 1px solid #ddd;*/
+            }
+            .sevenUp-hr{
+                border-color: #000000;
+                margin: 5px;
+            }
+            .panel-body button{
+                margin-bottom: 5px;;
             }
         </style>
