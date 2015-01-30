@@ -16,11 +16,13 @@
         Selected: <b>{{ selected.item }}</b>
     </div>
     <div class="modal-footer">
-        <a class="pull-left" ng-click="">创建收藏夹</a>
+        <a class="pull-left" ng-click="openCreateDialog()">创建收藏夹</a>
         <button class="btn btn-primary" ng-click="ok()">OK</button>
         <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
     </div>
 </script>
+<!-- collection dialog templates -->
+<div ng-include="'views/asgard/template/collectionCreateDialog.html'"></div>
 <!--
 <script type="text/ng-template" id="createCollectionDialog.html">
 <div class="modal-header">

@@ -24,7 +24,8 @@ asgard.controller('AsgardController', ['$scope','$resource','$modal', '$log','$t
     $scope.messagePopover = '<a>Hello, World!</a>';
     $scope.messagePopoverTitle = 'Title';
 
-    $scope.open = function (size) {
+    $scope.selection = {id:"nonumber1989"};
+    $scope.openCollectionDialog = function (size) {
         var modalInstance = $modal.open({
             templateUrl: 'collectionDialog.html',
             controller: 'CollectionDialogController',
@@ -32,11 +33,15 @@ asgard.controller('AsgardController', ['$scope','$resource','$modal', '$log','$t
             resolve: {
                 collections: function () {
                     return $scope.collections;
+                },
+                selection :function(){
+                    return $scope.selection;
                 }
             }
         });
         modalInstance.result.then(function (selectedItem) {
             $scope.selected = selectedItem;
+            console.log(selectedItem+'---collectionDialog');
         }, function () {
             $log.info('Modal dismissed at: ' + new Date());
         });
