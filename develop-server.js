@@ -62,12 +62,10 @@ httpProxy.createServer(function (req, res, proxy) {
 /***** Express Web Server - Section START *****/
 var app = express();
 
-app.configure(function () {
-    //app.use(express.logger('[:date] :method :url :status - :response-time ms'));
+app.enable('strict routing');
 
-    app.enable('strict routing');
-});
 app.use(slash());
+
 app.get('/warship/', function(req, res){
     if(!login){
         res.sendfile(staticPath+'/login.html');
