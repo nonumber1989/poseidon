@@ -11,31 +11,44 @@ var express = require('express'),
     url = require('url');
 
 var backendPathRegExp = new RegExp('\/(' + conf.backend.paths.join('|') + ')');
-var staticPath = __dirname + '/app';
+var staticPath = '/app';
 
 var login=false;
-/***** Resource watch - Section END *****/
-
-/***** Reverse Proxy Server - Section START *****/
-// Create a proxy server with custom application logic
-
 http.createServer(function(req, res) {
-    var hostname = req.headers.host.split(":")[0];
-    var pathname = url.parse(req.url).pathname;
+    if (req.url.match(backendPathRegExp)) {
+        if (conf.backend.context) {
+            var reqUrl = url.parse(req.url);
+            req.url = conf.backend.context + reqUrl.path;
+        }
+        console.log('Forwarding request to backend server %s'.cyan, req.url);
+        req.headers["Host"] = "gpcollect.com:8080";
+        proxy.proxyRequest(req, res, {
+            host: conf.backend.host,
+            port: conf.backend.port
+        });
+        if(req.url.indexOf("/api/auth/login")!=-1){
+            console.log('logined');
+            login = true;
+        }
+        if(req.url.indexOf("/api/auth/logout")!=-1){
+            console.log('logined');
+            login = false;
+        }
+        res.oldWriteHead = res.writeHead;
+        res.writeHead = function(statusCode, headers) {
+            if(statusCode == 403){
+                console.log(statusCode);
+                login = false;
+            }
+            res.oldWriteHead(statusCode, headers);
+        }
+    } else {
+        //console.log('Forwarding request to web server %s'.yellow, req.url);
+        proxy.proxyRequest(req, res, {
+            host: 'localhost',
+            port: conf.webServerPort
+        });
 
-    console.log(hostname);
-    console.log(pathname);
-
-    switch(hostname)
-    {
-        case 'foo.loc':
-            proxy.web(req, res, { target: 'http://localhost:9001' });
-            break;
-        case 'bar.loc':
-            proxy.web(req, res, { target: 'http://localhost:9002' });
-            break;
-        default:
-            proxy.web(req, res, { target: 'http://localhost:9003' });
     }
 }).listen(9000, function() {
     console.log('proxy listening on port 9000');
@@ -51,7 +64,7 @@ app.enable('strict routing');
 
 app.use(slash());
 
-app.get('/', function(req, res){
+app.get('/warship/', function(req, res){
     if(!login){
         res.sendfile(staticPath+'/index.html');
     }else{
@@ -59,12 +72,10 @@ app.get('/', function(req, res){
     }
 });
 
-app.use('/',express.static(staticPath));
+app.use('/warship/',express.static(staticPath));
 var server = http.createServer(app);
 //server.listen(conf.webServerPort);
-server.listen(10000);
+server.listen(9000);
 console.log('Web server running on port %s'.grey, server.address().port);
-console.log('Proxy server running on port %s. Use url http://localhost:%s to access the application.'.grey,
-    conf.port,
-    conf.port);
+console.log('Proxy server running on port %s. Use url http://localhost:%s to access the application.'.grey, conf.port,conf.port);
 /***** Express Web Server - Section END *****/
