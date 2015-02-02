@@ -1,0 +1,27 @@
+<script type="text/ng-template" id="messageDialog.html">
+    <div class="modal-header">
+        <h3 class="modal-title">发送私信</h3>
+    </div>
+    <div class="modal-body">
+
+        <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="receiver" class="col-md-2 control-label">Receiver</label>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" id="receiver" placeholder="Receiver">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="col-md-2 control-label">message</label>
+                    <div class="col-md-10">
+                        <textarea  type="text" class="form-control" id="message" rows="3" placeholder="message"></textarea>
+                    </div>
+                </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</script>
+

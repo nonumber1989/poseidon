@@ -1,4 +1,5 @@
-<div class="container-fluid">
+<div ng-include="'views/layout/header.html'"></div>
+<div class="container">
     <tabset>
       <!--select="alertMe()"-->
       <tab ng-repeat="tab in tabs" active="tab.active" disabled="tab.disabled">

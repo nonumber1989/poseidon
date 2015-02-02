@@ -1,7 +1,12 @@
 {
   "name": "poseidon",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "colors": "^1.0.3",
+    "express": "^4.11.1",
+    "express-slash": "^2.0.1",
+    "http-proxy": "^1.8.1"
+  },
   "devDependencies": {
     "grunt": "^0.4.1",
     "grunt-autoprefixer": "^0.7.3",

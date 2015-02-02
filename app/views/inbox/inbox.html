@@ -1,0 +1,42 @@
+<div ng-include="'views/layout/header.html'"></div>
+<div ui-view>
+    <div class="container">
+        <section class="col-md-8">
+            <div class="page-header">
+                <strong>我的私信</strong>
+                <button type="button" class="btn btn-link pull-right" ng-click="openMessageDialog()">写私信</button>
+            </div>
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="images/internet.jpg" alt="..." width="64" height="64">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">Media heading</h4>
+                <p>
+                    Steven Xu，你好。
+
+                    即将过去的 2014，你有哪些收获？
+
+                    阅读的新知，是否带你领略了更广阔的世界？
+
+                    关注的他人，是否让你领悟了生活的千差万别？
+
+                    希望这一年，你因知乎而有所收获。
+
+                    点击 http://zhi.hu/d6KM ，回顾你的「知乎 2014」
+
+                    2015 ，知乎还在这里等你。
+                    你好 2014。
+                </p>
+            </div>
+        </div>
+        </section>
+        <section class="col-md-4">
+
+        </section>
+    </div>
+</div>
+<!-- collection dialog templates -->
+<div ng-include="'views/inbox/messageDialog.html'"></div>

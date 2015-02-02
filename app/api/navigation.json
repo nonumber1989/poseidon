@@ -25,6 +25,11 @@
             "templateUrl": "views/setting/setting.html",
             "controller": "SettingController"
         },
+        "inbox": {
+            "url": "/inbox",
+            "templateUrl": "views/inbox/inbox.html",
+            "controller": "InboxController"
+        },
         "artwork": {
             "url": "/artwork",
             "templateUrl": "../views/artwork/artwork.html",
