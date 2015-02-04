@@ -9,7 +9,6 @@ var express = require('express'),
     slash   = require('express-slash'),
     path = require('path'),
     url = require('url');
-
 var backendPathRegExp = new RegExp('\/(' + conf.backend.paths.join('|') + ')');
 var staticPath = '/app';
 
@@ -21,7 +20,7 @@ http.createServer(function(req, res) {
             req.url = conf.backend.context + reqUrl.path;
         }
         console.log('Forwarding request to backend server %s'.cyan, req.url);
-        req.headers["Host"] = "gpcollect.com:8080";
+        req.headers["Host"] = "localhost:8080";
         proxy.proxyRequest(req, res, {
             host: conf.backend.host,
             port: conf.backend.port
