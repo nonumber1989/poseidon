@@ -28,5 +28,9 @@
     "angular-mocks": "~1.3.8",
     "angular-scenario": "~1.3.8"
   },
-  "appPath": "app"
+  "appPath": "app",
+  "moduleName": "poseidon",
+  "resolutions": {
+    "angular": "1.5.3"
+  }
 }
